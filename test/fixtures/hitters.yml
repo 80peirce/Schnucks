@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  team: MyString
+  position: MyString
+  atbats: 1
+  runs: 1
+  hits: 1
+  batting_average: 1.5
+  home_runs: 1
+  rbi: 1
+  stolen_bases: 1
+
+two:
+  name: MyString
+  team: MyString
+  position: MyString
+  atbats: 1
+  runs: 1
+  hits: 1
+  batting_average: 1.5
+  home_runs: 1
+  rbi: 1
+  stolen_bases: 1
