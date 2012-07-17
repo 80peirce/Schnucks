@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120630020742) do
+ActiveRecord::Schema.define(:version => 20120717021723) do
 
   create_table "hitters", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,25 @@ ActiveRecord::Schema.define(:version => 20120630020742) do
     t.integer  "stolen_bases"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "pitchers", :force => true do |t|
+    t.string   "name"
+    t.string   "team"
+    t.string   "games"
+    t.string   "games_started"
+    t.string   "innings_pitched"
+    t.string   "wins"
+    t.string   "losses"
+    t.string   "saves"
+    t.string   "walks"
+    t.string   "strikeouts"
+    t.string   "earned_runs"
+    t.string   "era"
+    t.string   "whip"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "hits"
   end
 
 end

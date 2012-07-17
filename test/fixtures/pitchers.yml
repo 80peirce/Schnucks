@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  team: MyString
+  games: MyString
+  games_started: MyString
+  innings_pitched: MyString
+  wins: MyString
+  losses: MyString
+  saves: MyString
+  walks: MyString
+  strikeouts: MyString
+  earned_runs: MyString
+  era: MyString
+  whip: MyString
+
+two:
+  name: MyString
+  team: MyString
+  games: MyString
+  games_started: MyString
+  innings_pitched: MyString
+  wins: MyString
+  losses: MyString
+  saves: MyString
+  walks: MyString
+  strikeouts: MyString
+  earned_runs: MyString
+  era: MyString
+  whip: MyString
