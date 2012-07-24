@@ -1,0 +1,13 @@
+<h1>Hitters</h1>
+
+<table>
+    
+<% @hitters.each do |hitter| %>
+  <tr>
+    <td><%= hitter.name %></td>
+    <td><%= hitter.team %></td>
+    <td><%= hitter.position %></td>
+  </tr>
+
+<% end %>
+</table>

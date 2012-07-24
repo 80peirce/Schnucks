@@ -1,4 +1,6 @@
 Schnucks::Application.routes.draw do
+  get "hitters/list"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
