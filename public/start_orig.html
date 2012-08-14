@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Schnuckers</title>
+  </head>
+  <body>
+          <h1>Let's play Schnucks!</h1>
+
+    
+<FORM >
+<h2>How many Schnuckers?</h2>
+<input type="radio" name="numberofplayers" onclick="playa(2)" value="two" /> 2<br />
+<input type="radio" name="numberofplayers" onclick="playa(3)" value="three" /> 3 <br />
+
+Schnucker 1: <input type="text" id="schnuckername1" value="<%= @person.name %>"/><br />
+Schnucker 2: <input type="text" id="schnuckername2" value="<%= @person.name %>"/><br />
+
+<div id="playa3" style="visibility:hidden">Schnucker 3: <input type="text" id="schnuckername3"/></div>
+
+<script language="javascript">
+            var x = 2;
+
+            function playa(x) {
+                if(x == 2) {
+                    document.getElementById("playa3").style.visibility="hidden";
+                }
+
+                if(x == 3) {
+                    document.getElementById("playa3").style.visibility="visible";
+                }
+
+            }
+        </script>
+
+
+</FORM>
+
+
+
+
+  </body>
+</html>

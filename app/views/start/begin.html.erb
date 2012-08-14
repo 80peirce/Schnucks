@@ -1,0 +1,43 @@
+<h1>Let's play Schnucks!</h1>
+
+<% session[:schnucker2] = 'Adrienne' %>
+    
+
+<%= form_tag("/shownames/show", :method => "get") do %>
+
+<script language="javascript">
+            var x = 2;
+
+            function playa(x) {
+                if(x == 2) {
+                    document.getElementById("playa3").style.visibility="hidden";
+                }
+
+                if(x == 3) {
+                    document.getElementById("playa3").style.visibility="visible";
+                }
+
+            }
+</script
+                 
+
+<h2>How many Schnuckers?</h2><br />
+<input type="radio" name="numberofplayers" onclick="playa(2)" value="two" /> 2<br />
+<input type="radio" name="numberofplayers" onclick="playa(3)" value="three" /> 3 <br />
+
+<br>
+  <%= label_tag(:p1, "Schnucker 1:") %>
+  <%= text_field_tag(:p1) %>
+  <br>
+  <%= label_tag(:p2, "Schnucker 2:") %>
+  <%= text_field_tag(:p2) %>
+  <br>
+
+<div id="playa3" style="visibility:hidden">
+  <%= label_tag(:p3, "Schnucker 3:") %>
+  <%= text_field_tag(:p3) %>
+</div>
+  <%= submit_tag("Done") %>
+<% end %>
+
+

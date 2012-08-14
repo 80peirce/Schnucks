@@ -1,5 +1,10 @@
 Schnucks::Application.routes.draw do
+  get "shownames/show"
+
+  get "start/begin"
+
   get "hitters/list"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
