@@ -1,5 +1,5 @@
 Schnucks::Application.routes.draw do
-  post "score/manual"
+  get "score/manual"
 
   post "shownames/show"
 

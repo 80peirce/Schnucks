@@ -1,2 +1,400 @@
-<h1>Score#manual</h1>
-<p>Find me in app/views/score/manual.html.erb</p>
+<h1>Score it old school.</h1>
+<p>Enter each Schnucker's team and scores:</p>
+
+
+
+
+<%= form_tag("/results", :method => "post") do %>
+<h2>Schnucker 1</h2>
+  <%= text_field_tag(:p1, "Enter name here") %>
+</br>
+<table border="0">
+  <tr style="text-align: center";>
+    <td>Pos</td><td>Name</td><td>AB</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
+  <tr><td>C</td>
+  <td><%= text_field_tag(:c1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:c1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c1_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c1_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c1_sb, nil, :size => 4) %></td>
+  </tr>
+  <tr><td>1B</td>
+  <td><%= text_field_tag(:firstb1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:firstb1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb1_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb1_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb1_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>2B</td>
+  <td><%= text_field_tag(:secondb1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:secondb1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb1_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb1_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb1_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>SS</td>
+  <td><%= text_field_tag(:ss1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:ss1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss1_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss1_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss1_sb, nil, :size => 4) %></td>
+  </tr>  
+    <tr><td>3B</td>
+  <td><%= text_field_tag(:thirdb1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:thirdb1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb1_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb1_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb1_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>OF1</td>
+  <td><%= text_field_tag(:of1_1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:of1_1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_1_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_1_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_1_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>OF2</td>
+  <td><%= text_field_tag(:of2_1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:of2_1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_1_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_1_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_1_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>OF3</td>
+  <td><%= text_field_tag(:of3_1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:of3_1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_1_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_1_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_1_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>UT</td>
+  <td><%= text_field_tag(:ut1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:ut1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut1_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut1_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut1_sb, nil, :size => 4) %></td>
+  </tr>
+    </table>
+</br><table>
+  <tr style="text-align: center";><td>Pos</td><td>Name</td><td>IP</td><td>ER</td><td>H</td><td>BB</td><td>K</td><td>W</td><td>L</td><td>SV</td></tr>
+      <tr><td>PP1</td>
+  <td><%= text_field_tag(:pp1_1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp1_1_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_1_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_1_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_1_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_1_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_1_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_1_sv, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>PP2</td>
+  <td><%= text_field_tag(:pp2_1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp2_1_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_1_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_1_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_1_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_1_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_1_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_1_sv, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>PP3</td>
+  <td><%= text_field_tag(:pp3_1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp3_1_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_1_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_1_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_1_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_1_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_1_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_1_sv, nil, :size => 4) %></td>
+  </tr> 
+    <tr><td>PP4</td>
+  <td><%= text_field_tag(:pp4_1_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp4_1_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_1_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_1_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_1_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_1_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_1_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_1_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_1_sv, nil, :size => 4) %></td>
+  </tr> 
+</table> 
+  
+  
+  <br>
+    <h2>Schnucker 2</h2>
+  <%= text_field_tag(:p2, "Enter name here") %>
+  </br>
+  <table>
+    <tr style="text-align: center";><td>Pos</td><td>Name</td><td>AB</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
+  <tr><td>C</td> 
+  <td><%= text_field_tag(:c2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:c2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c2_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c2_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c2_sb, nil, :size => 4) %></td>
+  </tr>
+  <tr><td>1B</td>
+  <td><%= text_field_tag(:firstb2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:firstb2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb2_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb2_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb2_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>2B</td>
+  <td><%= text_field_tag(:secondb2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:secondb2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb2_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb2_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb2_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>SS</td>
+  <td><%= text_field_tag(:ss2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:ss2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss2_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss2_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss2_sb, nil, :size => 4) %></td>
+  </tr>  
+    <tr><td>3B</td>
+  <td><%= text_field_tag(:thirdb2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:thirdb2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb2_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb2_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb2_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>OF1</td>
+  <td><%= text_field_tag(:of1_2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:of1_2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_2_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_2_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_2_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>OF2</td>
+  <td><%= text_field_tag(:of2_2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:of2_2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_2_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_2_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_2_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>OF3</td>
+  <td><%= text_field_tag(:of3_2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:of3_2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_2_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_2_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_2_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>UT</td>
+  <td><%= text_field_tag(:ut2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:ut2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut2_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut2_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut2_sb, nil, :size => 4) %></td>
+  </tr>
+    </table>
+</br><table>
+  <tr style="text-align: center";><td>Pos</td><td>Name</td><td>IP</td><td>ER</td><td>H</td><td>BB</td><td>K</td><td>W</td><td>L</td><td>SV</td></tr>
+      <tr><td>PP1</td>
+  <td><%= text_field_tag(:pp1_2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp1_2_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_2_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_2_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_2_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_2_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_2_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_2_sv, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>PP2</td>
+  <td><%= text_field_tag(:pp2_2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp2_2_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_2_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_2_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_2_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_2_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_2_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_2_sv, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>PP3</td>
+  <td><%= text_field_tag(:pp3_2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp3_2_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_2_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_2_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_2_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_2_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_2_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_2_sv, nil, :size => 4) %></td>
+  </tr> 
+    <tr><td>PP4</td>
+  <td><%= text_field_tag(:pp4_2_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp4_2_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_2_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_2_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_2_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_2_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_2_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_2_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_2_sv, nil, :size => 4) %></td>
+  </tr> 
+</table>
+  <br>
+     <h2>Schnucker 3</h2>
+  <%= text_field_tag(:p3, "Enter name here") %>
+
+  <table><tr style="text-align: center";><td>Pos</td><td>Name</td><td>AB</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
+  <tr><td>C</td>
+  <td><%= text_field_tag(:c3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:c3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c3_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c3_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c3_sb, nil, :size => 4) %></td>
+  </tr>
+  <tr><td>1B</td>
+  <td><%= text_field_tag(:firstb3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:firstb3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb3_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb3_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb3_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>2B</td>
+  <td><%= text_field_tag(:secondb3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:secondb3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb3_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb3_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb3_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>SS</td>
+  <td><%= text_field_tag(:ss3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:ss3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss3_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss3_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss3_sb, nil, :size => 4) %></td>
+  </tr>  
+    <tr><td>3B</td>
+  <td><%= text_field_tag(:thirdb3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:thirdb3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb3_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb3_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb3_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>OF1</td>
+  <td><%= text_field_tag(:of1_3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:of1_3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_3_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_3_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_3_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>OF2</td>
+  <td><%= text_field_tag(:of2_3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:of2_3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_3_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_3_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_3_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>OF3</td>
+  <td><%= text_field_tag(:of3_3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:of3_3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_3_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_3_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_3_sb, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>UT</td>
+  <td><%= text_field_tag(:ut3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:ut3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut3_hr, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut3_rbi, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut3_sb, nil, :size => 4) %></td>
+  </tr>
+    </table>
+</br><table>
+  <tr style="text-align: center";><td>Pos</td><td>Name</td><td>IP</td><td>ER</td><td>H</td><td>BB</td><td>K</td><td>W</td><td>L</td><td>SV</td></tr>
+      <tr><td>PP1</td>
+  <td><%= text_field_tag(:pp1_3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp1_3_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_3_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_3_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_3_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_3_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_3_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp1_3_sv, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>PP2</td>
+  <td><%= text_field_tag(:pp2_3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp2_3_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_3_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_3_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_3_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_3_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_3_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp2_3_sv, nil, :size => 4) %></td>
+  </tr>
+    <tr><td>PP3</td>
+  <td><%= text_field_tag(:pp3_3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp3_3_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_3_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_3_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_3_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_3_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_3_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp3_3_sv, nil, :size => 4) %></td>
+  </tr> 
+    <tr><td>PP4</td>
+  <td><%= text_field_tag(:pp4_3_name, nil, :size => 20) %></td>
+  <td><%= text_field_tag(:pp4_3_ip, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_3_er, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_3_h, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_3_bb, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_3_k, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_3_w, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_3_l, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:pp4_3_sv, nil, :size => 4) %></td>
+  </tr> 
+</table>
+  <%= submit_tag("Done") %>
+  
+
+
+
+  
+  
+  
+  
+  
+  
+  
+<% end %>
+
