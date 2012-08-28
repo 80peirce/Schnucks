@@ -1,3 +1,5 @@
+<title>SCORE IT OLD SCHOOL</title>
+
 <h1>Score it old school.</h1>
 <p>Enter each Schnucker's team and scores:</p>
 
@@ -10,10 +12,11 @@
 </br>
 <table border="0">
   <tr style="text-align: center";>
-    <td>Pos</td><td>Name</td><td>AB</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
+    <td>Pos</td><td>Name</td><td>AB</td><td>R</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
   <tr><td>C</td>
   <td><%= text_field_tag(:c1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:c1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c1_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:c1_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:c1_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:c1_rbi, nil, :size => 4) %></td>
@@ -22,6 +25,7 @@
   <tr><td>1B</td>
   <td><%= text_field_tag(:firstb1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:firstb1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb1_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:firstb1_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:firstb1_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:firstb1_rbi, nil, :size => 4) %></td>
@@ -30,6 +34,7 @@
     <tr><td>2B</td>
   <td><%= text_field_tag(:secondb1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:secondb1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb1_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:secondb1_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:secondb1_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:secondb1_rbi, nil, :size => 4) %></td>
@@ -38,6 +43,7 @@
     <tr><td>SS</td>
   <td><%= text_field_tag(:ss1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:ss1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss1_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ss1_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ss1_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ss1_rbi, nil, :size => 4) %></td>
@@ -46,6 +52,7 @@
     <tr><td>3B</td>
   <td><%= text_field_tag(:thirdb1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:thirdb1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb1_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:thirdb1_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:thirdb1_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:thirdb1_rbi, nil, :size => 4) %></td>
@@ -54,6 +61,7 @@
     <tr><td>OF1</td>
   <td><%= text_field_tag(:of1_1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:of1_1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_1_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of1_1_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of1_1_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of1_1_rbi, nil, :size => 4) %></td>
@@ -62,6 +70,7 @@
     <tr><td>OF2</td>
   <td><%= text_field_tag(:of2_1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:of2_1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_1_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of2_1_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of2_1_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of2_1_rbi, nil, :size => 4) %></td>
@@ -70,6 +79,7 @@
     <tr><td>OF3</td>
   <td><%= text_field_tag(:of3_1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:of3_1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_1_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of3_1_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of3_1_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of3_1_rbi, nil, :size => 4) %></td>
@@ -78,6 +88,7 @@
     <tr><td>UT</td>
   <td><%= text_field_tag(:ut1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:ut1_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut1_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ut1_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ut1_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ut1_rbi, nil, :size => 4) %></td>
@@ -138,10 +149,11 @@
   <%= text_field_tag(:p2, "Enter name here") %>
   </br>
   <table>
-    <tr style="text-align: center";><td>Pos</td><td>Name</td><td>AB</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
+    <tr style="text-align: center";><td>Pos</td><td>Name</td><td>AB</td><td>R</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
   <tr><td>C</td> 
   <td><%= text_field_tag(:c2_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:c2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c2_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:c2_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:c2_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:c2_rbi, nil, :size => 4) %></td>
@@ -150,6 +162,7 @@
   <tr><td>1B</td>
   <td><%= text_field_tag(:firstb2_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:firstb2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb2_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:firstb2_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:firstb2_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:firstb2_rbi, nil, :size => 4) %></td>
@@ -158,6 +171,7 @@
     <tr><td>2B</td>
   <td><%= text_field_tag(:secondb2_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:secondb2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb2_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:secondb2_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:secondb2_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:secondb2_rbi, nil, :size => 4) %></td>
@@ -166,6 +180,7 @@
     <tr><td>SS</td>
   <td><%= text_field_tag(:ss2_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:ss2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss2_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ss2_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ss2_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ss2_rbi, nil, :size => 4) %></td>
@@ -174,6 +189,7 @@
     <tr><td>3B</td>
   <td><%= text_field_tag(:thirdb2_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:thirdb2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb2_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:thirdb2_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:thirdb2_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:thirdb2_rbi, nil, :size => 4) %></td>
@@ -182,6 +198,7 @@
     <tr><td>OF1</td>
   <td><%= text_field_tag(:of1_2_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:of1_2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_2_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of1_2_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of1_2_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of1_2_rbi, nil, :size => 4) %></td>
@@ -190,6 +207,7 @@
     <tr><td>OF2</td>
   <td><%= text_field_tag(:of2_2_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:of2_2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_2_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of2_2_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of2_2_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of2_2_rbi, nil, :size => 4) %></td>
@@ -198,6 +216,7 @@
     <tr><td>OF3</td>
   <td><%= text_field_tag(:of3_2_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:of3_2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_2_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of3_2_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of3_2_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of3_2_rbi, nil, :size => 4) %></td>
@@ -206,6 +225,7 @@
     <tr><td>UT</td>
   <td><%= text_field_tag(:ut2_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:ut2_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut2_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ut2_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ut2_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ut2_rbi, nil, :size => 4) %></td>
@@ -263,10 +283,11 @@
      <h2>Schnucker 3</h2>
   <%= text_field_tag(:p3, "Enter name here") %>
 
-  <table><tr style="text-align: center";><td>Pos</td><td>Name</td><td>AB</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
+  <table><tr style="text-align: center";><td>Pos</td><td>Name</td><td>AB</td><td>R</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
   <tr><td>C</td>
   <td><%= text_field_tag(:c3_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:c3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:c3_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:c3_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:c3_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:c3_rbi, nil, :size => 4) %></td>
@@ -275,6 +296,7 @@
   <tr><td>1B</td>
   <td><%= text_field_tag(:firstb3_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:firstb3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:firstb3_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:firstb3_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:firstb3_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:firstb3_rbi, nil, :size => 4) %></td>
@@ -283,6 +305,7 @@
     <tr><td>2B</td>
   <td><%= text_field_tag(:secondb3_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:secondb3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:secondb3_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:secondb3_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:secondb3_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:secondb3_rbi, nil, :size => 4) %></td>
@@ -291,6 +314,7 @@
     <tr><td>SS</td>
   <td><%= text_field_tag(:ss3_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:ss3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ss3_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ss3_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ss3_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ss3_rbi, nil, :size => 4) %></td>
@@ -299,6 +323,7 @@
     <tr><td>3B</td>
   <td><%= text_field_tag(:thirdb3_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:thirdb3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:thirdb3_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:thirdb3_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:thirdb3_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:thirdb3_rbi, nil, :size => 4) %></td>
@@ -307,6 +332,7 @@
     <tr><td>OF1</td>
   <td><%= text_field_tag(:of1_3_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:of1_3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of1_3_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of1_3_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of1_3_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of1_3_rbi, nil, :size => 4) %></td>
@@ -315,6 +341,7 @@
     <tr><td>OF2</td>
   <td><%= text_field_tag(:of2_3_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:of2_3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of2_3_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of2_3_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of2_3_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of2_3_rbi, nil, :size => 4) %></td>
@@ -323,6 +350,7 @@
     <tr><td>OF3</td>
   <td><%= text_field_tag(:of3_3_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:of3_3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:of3_3_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of3_3_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of3_3_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:of3_3_rbi, nil, :size => 4) %></td>
@@ -331,6 +359,7 @@
     <tr><td>UT</td>
   <td><%= text_field_tag(:ut3_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:ut3_ab, nil, :size => 4) %></td>
+  <td><%= text_field_tag(:ut3_r, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ut3_h, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ut3_hr, nil, :size => 4) %></td>
   <td><%= text_field_tag(:ut3_rbi, nil, :size => 4) %></td>
