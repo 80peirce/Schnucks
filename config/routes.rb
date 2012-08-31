@@ -2,6 +2,8 @@ Schnucks::Application.routes.draw do
   get "score/manual"
 
   post "shownames/show"
+  
+  post "score/results"
 
   get "start/begin"
 

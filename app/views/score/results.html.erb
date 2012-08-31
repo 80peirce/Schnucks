@@ -1,0 +1,26 @@
+<title>Here are your results</title>
+
+<h1>Schnucker 1: <%= @schnucker1 %></h1>
+Total hits: <%= @schnucker1_hits_total %>
+<br>
+Total at bats: <%= @schnucker1_ab_total %>
+<br>
+Batting Average: <%= sprintf("%.3f",@schnucker1_ba)[-4,4] %>
+<br>
+Runs: <%= @schnucker1_runs_total %>
+<br>
+Home Runs: <%= @schnucker1_hr_total %>
+<br>
+Stolen Bases: <%= @schnucker1_sb_total %>
+<br>
+Innings Pitched: <%= @schnucker1_ip_total %><br>
+Earned Runs: <%= @schnucker1_er_total %><br>
+Hits: <%= @schnucker1_h_total %>
+Walks: <%= @schnucker1_bb_total %><br>
+ERA: <%= @schnucker1_era.to_s[0,4] %>
+WHIP: <%= @schnucker1_whip.to_s[0,4] %><br>
+W: <%= @schnucker1_w_total %>
+L: <%= @schnucker1_l_total %>
+SV: <%= @schnucker1_sv_total %>
+
+
