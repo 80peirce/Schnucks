@@ -22,5 +22,26 @@ WHIP: <%= @schnucker1_whip.to_s[0,4] %><br>
 W: <%= @schnucker1_w_total %>
 L: <%= @schnucker1_l_total %>
 SV: <%= @schnucker1_sv_total %>
-
-
+<hr>
+<h1>Schnucker 2: <%= @schnucker2 %></h1>
+Total hits: <%= @schnucker2_hits_total %>
+<br>
+Total at bats: <%= @schnucker2_ab_total %>
+<br>
+Batting Average: <%= sprintf("%.3f",@schnucker2_ba)[-4,4] %>
+<br>
+Runs: <%= @schnucker2_runs_total %>
+<br>
+Home Runs: <%= @schnucker2_hr_total %>
+<br>
+Stolen Bases: <%= @schnucker2_sb_total %>
+<br>
+Innings Pitched: <%= @schnucker2_ip_total %><br>
+Earned Runs: <%= @schnucker2_er_total %><br>
+Hits: <%= @schnucker2_h_total %>
+Walks: <%= @schnucker2_bb_total %><br>
+ERA: <%= @schnucker2_era.to_s[0,4] %>
+WHIP: <%= @schnucker2_whip.to_s[0,4] %><br>
+W: <%= @schnucker2_w_total %>
+L: <%= @schnucker2_l_total %>
+SV: <%= @schnucker2_sv_total %>
