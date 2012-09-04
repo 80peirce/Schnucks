@@ -84,6 +84,120 @@ class ScoreController < ApplicationController
   @schnucker2_era = (@schnucker2_er_total.to_f / @schnucker2_ip_total.to_f) * 9.to_f
   @schnucker2_whip = @schnucker2_wh_total.to_f / @schnucker2_ip_total.to_f
   
+## calculate points
+
+  @schnucker1_total = 0.0
+  @schnucker2_total = 0.0
+  
+  if ((@schnucker1_ba * 100.to_f).to_i > (@schnucker2_ba  * 100.to_f).to_i)
+    @schnucker1_total += 2
+    @schnucker2_total += 1
+  elsif ((@schnucker1_ba * 100.to_f).to_i < (@schnucker2_ba * 100.to_f).to_i)
+    @schnucker1_total += 1
+    @schnucker2_total += 2
+  else 
+    @schnucker1_total += 1.5
+    @schnucker2_total += 1.5
+  end
+  
+  if (@schnucker1_runs_total > @schnucker2_runs_total)
+    @schnucker1_total += 2
+    @schnucker2_total += 1
+  elsif (@schnucker1_runs_total < @schnucker2_runs_total)
+    @schnucker1_total += 1
+    @schnucker2_total += 2
+  else 
+    @schnucker1_total += 1.5
+    @schnucker2_total += 1.5
+  end
+  
+  if (@schnucker1_hr_total > @schnucker2_hr_total)
+    @schnucker1_total += 2
+    @schnucker2_total += 1
+  elsif (@schnucker1_hr_total < @schnucker2_hr_total)
+    @schnucker1_total += 1
+    @schnucker2_total += 2
+  else 
+    @schnucker1_total += 1.5
+    @schnucker2_total += 1.5
+  end
+  
+  if (@schnucker1_rbi_total > @schnucker2_rbi_total)
+    @schnucker1_total += 2
+    @schnucker2_total += 1
+  elsif (@schnucker1_rbi_total < @schnucker2_rbi_total)
+    @schnucker1_total += 1
+    @schnucker2_total += 2
+  else 
+    @schnucker1_total += 1.5
+    @schnucker2_total += 1.5
+  end
+
+  if (@schnucker1_sb_total > @schnucker2_sb_total)
+    @schnucker1_total += 2
+    @schnucker2_total += 1
+  elsif (@schnucker1_sb_total < @schnucker2_sb_total)
+    @schnucker1_total += 1
+    @schnucker2_total += 2
+  else 
+    @schnucker1_total += 1.5
+    @schnucker2_total += 1.5
+  end
+ 
+  if (@schnucker1_k_total > @schnucker2_k_total)
+    @schnucker1_total += 2
+    @schnucker2_total += 1
+  elsif (@schnucker1_k_total < @schnucker2_k_total)
+    @schnucker1_total += 1
+    @schnucker2_total += 2
+  else 
+    @schnucker1_total += 1.5
+    @schnucker2_total += 1.5
+  end
+
+ if ((@schnucker1_era * 100.to_f).to_i < (@schnucker2_era * 100.to_f).to_i)
+    @schnucker1_total += 2
+    @schnucker2_total += 1
+  elsif ((@schnucker1_era * 100.to_f).to_i > (@schnucker2_era * 100.to_f).to_i)
+    @schnucker1_total += 1
+    @schnucker2_total += 2
+  else 
+    @schnucker1_total += 1.5
+    @schnucker2_total += 1.5
+  end
+  
+ if ((@schnucker1_whip * 100.to_f).to_i < (@schnucker2_whip * 100.to_f).to_i)
+    @schnucker1_total += 2
+    @schnucker2_total += 1
+  elsif ((@schnucker1_whip * 100.to_f).to_i > (@schnucker2_whip * 100.to_f).to_i)
+    @schnucker1_total += 1
+    @schnucker2_total += 2
+  else 
+    @schnucker1_total += 1.5
+    @schnucker2_total += 1.5
+ end
+
+  if (@schnucker1_w_total > @schnucker2_w_total)
+    @schnucker1_total += 2
+    @schnucker2_total += 1
+  elsif (@schnucker1_w_total < @schnucker2_w_total)
+    @schnucker1_total += 1
+    @schnucker2_total += 2
+  else 
+    @schnucker1_total += 1.5
+    @schnucker2_total += 1.5
+  end 
+
+  if (@schnucker1_sv_total > @schnucker2_sv_total)
+    @schnucker1_total += 2
+    @schnucker2_total += 1
+  elsif (@schnucker1_sv_total < @schnucker2_sv_total)
+    @schnucker1_total += 1
+    @schnucker2_total += 2
+  else 
+    @schnucker1_total += 1.5
+    @schnucker2_total += 1.5
+  end
   
   end
 end
