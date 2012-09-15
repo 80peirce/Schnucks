@@ -5,27 +5,33 @@ class ScoreController < ApplicationController
   def results 
   ## calculate player1 totals
   
+    def total_things (*a)
+      sum = 0
+      a.each { |h| sum += h.to_i}
+      sum
+    end
+  
   @schnucker1 = params[:p1]
   
-  @schnucker1_hits_total = params[:c1_h].to_i + params[:firstb1_h].to_i + params[:secondb1_h].to_i + params[:thirdb1_h].to_i +
-  params[:ss1_h].to_i + params[:of1_1_h].to_i + params[:of2_1_h].to_i + params[:of3_1_h].to_i + params[:ut1_h].to_i
+  @schnucker1_hits_total = total_things(params[:c1_h],params[:firstb1_h],params[:secondb1_h],params[:thirdb1_h],params[:ss1_h],
+  params[:of1_1_h],params[:of2_1_h],params[:of3_1_h],params[:ut1_h])
   
-  @schnucker1_ab_total = params[:c1_ab].to_i + params[:firstb1_ab].to_i + params[:secondb1_ab].to_i + params[:thirdb1_ab].to_i +
-  params[:ss1_ab].to_i + params[:of1_1_ab].to_i + params[:of2_1_ab].to_i + params[:of3_1_ab].to_i + params[:ut1_ab].to_i
+  @schnucker1_ab_total = total_things(params[:c1_ab],params[:firstb1_ab],params[:secondb1_ab],params[:thirdb1_ab],params[:ss1_ab],
+  params[:of1_1_ab],params[:of2_1_ab],params[:of3_1_ab],params[:ut1_ab])
   
   @schnucker1_ba = @schnucker1_hits_total.to_f / @schnucker1_ab_total.to_f
   
-  @schnucker1_runs_total = params[:c1_r].to_i + params[:firstb1_r].to_i + params[:secondb1_r].to_i + params[:thirdb1_r].to_i +
-  params[:ss1_r].to_i + params[:of1_1_r].to_i + params[:of2_1_r].to_i+ params[:of3_1_r].to_i + params[:ut1_r].to_i
+  @schnucker1_runs_total = total_things(params[:c1_r],params[:firstb1_r],params[:secondb1_r],params[:thirdb1_r],params[:ss1_r],
+  params[:of1_1_r],params[:of2_1_r],params[:of3_1_r],params[:ut1_r])
   
-  @schnucker1_hr_total = params[:c1_hr].to_i + params[:firstb1_hr].to_i + params[:secondb1_hr].to_i + params[:thirdb1_hr].to_i +
-  params[:ss1_hr].to_i + params[:of1_1_hr].to_i + params[:of2_1_hr].to_i + params[:of3_1_hr].to_i + params[:ut1_hr].to_i
+  @schnucker1_hr_total = total_things(params[:c1_hr],params[:firstb1_hr],params[:secondb1_hr],params[:thirdb1_hr],params[:ss1_hr],
+  params[:of1_1_hr],params[:of2_1_hr],params[:of3_1_hr],params[:ut1_hr])
   
-  @schnucker1_rbi_total = params[:c1_rbi].to_i + params[:firstb1_rbi].to_i + params[:secondb1_rbi].to_i + params[:thirdb1_rbi].to_i +
-  params[:ss1_rbi].to_i + params[:of1_1_rbi].to_i + params[:of2_1_rbi].to_i + params[:of3_1_rbi].to_i + params[:ut1_rbi].to_i
+  @schnucker1_rbi_total = total_things(params[:c1_rbi],params[:firstb1_rbi],params[:secondb1_rbi],params[:thirdb1_rbi],params[:ss1_rbi],
+  params[:of1_1_rbi],params[:of2_1_rbi],params[:of3_1_rbi],params[:ut1_rbi])
   
-  @schnucker1_sb_total = params[:c1_sb].to_i + params[:firstb1_sb].to_i + params[:secondb1_sb].to_i + params[:thirdb1_sb].to_i +
-  params[:ss1_sb].to_i + params[:of1_1_sb].to_i + params[:of2_1_sb].to_i + params[:of3_1_sb].to_i + params[:ut1_sb].to_i
+  @schnucker1_sb_total = total_things(params[:c1_sb],params[:firstb1_sb],params[:secondb1_sb],params[:thirdb1_sb],params[:ss1_sb],
+  params[:of1_1_sb],params[:of2_1_sb],params[:of3_1_sb],params[:ut1_sb])
   
   
   @schnucker1_ip_total = params[:pp1_1_ip].to_i + params[:pp2_1_ip].to_i + params[:pp3_1_ip].to_i + params[:pp4_1_ip].to_i
@@ -48,25 +54,25 @@ class ScoreController < ApplicationController
   
   @schnucker2 = params[:p2]
   
-  @schnucker2_hits_total = params[:c2_h].to_i + params[:firstb2_h].to_i + params[:secondb2_h].to_i + params[:thirdb2_h].to_i +
-  params[:ss2_h].to_i + params[:of1_2_h].to_i + params[:of2_2_h].to_i + params[:of3_2_h].to_i + params[:ut2_h].to_i
+  @schnucker2_hits_total = total_things(params[:c2_h],params[:firstb2_h],params[:secondb2_h],params[:thirdb2_h],params[:ss2_h],
+  params[:of1_2_h],params[:of2_2_h],params[:of3_2_h],params[:ut2_h])
   
-  @schnucker2_ab_total = params[:c2_ab].to_i + params[:firstb2_ab].to_i + params[:secondb2_ab].to_i + params[:thirdb2_ab].to_i +
-  params[:ss2_ab].to_i + params[:of1_2_ab].to_i + params[:of2_2_ab].to_i + params[:of3_2_ab].to_i + params[:ut2_ab].to_i
+  @schnucker2_ab_total = total_things(params[:c2_ab],params[:firstb2_ab],params[:secondb2_ab],params[:thirdb2_ab],params[:ss2_ab],
+  params[:of1_2_ab],params[:of2_2_ab],params[:of3_2_ab],params[:ut2_ab])
   
   @schnucker2_ba = @schnucker2_hits_total.to_f / @schnucker2_ab_total.to_f
   
-  @schnucker2_runs_total = params[:c2_r].to_i + params[:firstb2_r].to_i + params[:secondb2_r].to_i + params[:thirdb2_r].to_i +
-  params[:ss2_r].to_i + params[:of1_2_r].to_i + params[:of2_2_r].to_i+ params[:of3_2_r].to_i + params[:ut2_r].to_i
+  @schnucker2_runs_total = total_things(params[:c2_r],params[:firstb2_r],params[:secondb2_r],params[:thirdb2_r],params[:ss2_r],
+  params[:of1_2_r],params[:of2_2_r],params[:of3_2_r],params[:ut2_r])
   
-  @schnucker2_hr_total = params[:c2_hr].to_i + params[:firstb2_hr].to_i + params[:secondb2_hr].to_i + params[:thirdb2_hr].to_i +
-  params[:ss2_hr].to_i + params[:of1_2_hr].to_i + params[:of2_2_hr].to_i + params[:of3_2_hr].to_i + params[:ut2_hr].to_i
+  @schnucker2_hr_total = total_things(params[:c2_hr],params[:firstb2_hr],params[:secondb2_hr],params[:thirdb2_hr],params[:ss2_hr],
+  params[:of1_2_hr],params[:of2_2_hr],params[:of3_2_hr],params[:ut2_hr])
   
-  @schnucker2_rbi_total = params[:c2_rbi].to_i + params[:firstb2_rbi].to_i + params[:secondb2_rbi].to_i + params[:thirdb2_rbi].to_i +
-  params[:ss2_rbi].to_i + params[:of1_2_rbi].to_i + params[:of2_2_rbi].to_i + params[:of3_2_rbi].to_i + params[:ut2_rbi].to_i
+  @schnucker2_rbi_total = total_things(params[:c2_rbi],params[:firstb2_rbi],params[:secondb2_rbi],params[:thirdb2_rbi],params[:ss2_rbi],
+  params[:of1_2_rbi],params[:of2_2_rbi],params[:of3_2_rbi],params[:ut2_rbi])
   
-  @schnucker2_sb_total = params[:c2_sb].to_i + params[:firstb2_sb].to_i + params[:secondb2_sb].to_i + params[:thirdb2_sb].to_i +
-  params[:ss2_sb].to_i + params[:of1_2_sb].to_i + params[:of2_2_sb].to_i + params[:of3_2_sb].to_i + params[:ut2_sb].to_i
+  @schnucker2_sb_total = total_things(params[:c2_sb],params[:firstb2_sb],params[:secondb2_sb],params[:thirdb2_sb],params[:ss2_sb],
+  params[:of1_2_sb],params[:of2_2_sb],params[:of3_2_sb],params[:ut2_sb])
   
   
   @schnucker2_ip_total = params[:pp1_2_ip].to_i + params[:pp2_2_ip].to_i + params[:pp3_2_ip].to_i + params[:pp4_2_ip].to_i
