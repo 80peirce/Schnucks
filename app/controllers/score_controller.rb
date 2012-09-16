@@ -1,5 +1,7 @@
 class ScoreController < ApplicationController
   def manual
+    @users = User.all
+    @user_table = User
   end
   
   def results 
