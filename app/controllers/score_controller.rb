@@ -13,6 +13,8 @@ class ScoreController < ApplicationController
       sum
     end
   
+  
+  
   @schnucker1 = params[:p1]
   
   @schnucker1_hits_total = total_things(params[:c1_h],params[:firstb1_h],params[:secondb1_h],params[:thirdb1_h],params[:ss1_h],
@@ -207,7 +209,15 @@ class ScoreController < ApplicationController
     @schnucker2_total += 1.5
   end
   
+end
+
+  def confirm
+  
+    NormanMailer.welcome_email("jacobvass@gmail.com").deliver
+
   end
+  
+
 end
 
   

@@ -53,3 +53,15 @@ WHIP: <%= @schnucker2_whip.to_s[0,4] %><br>
 W: <%= @schnucker2_w_total %>
 L: <%= @schnucker2_l_total %>
 SV: <%= @schnucker2_sv_total %>
+
+<%= form_tag("confirm", :method => "post") do %>
+
+
+
+ <%= submit_tag("Send Email") %>
+    
+  <% end %>
+  
+
+  
+  

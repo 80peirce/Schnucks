@@ -34,4 +34,15 @@ Schnucks::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # email configuration
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :address              => "mail.adriennepeirce.com",
+  :port                 => 2626,
+  :domain               => 'adriennepeirce.com',
+  :user_name            => 'abp@adriennepeirce.com',
+  :password             => 'mecom80!',
+  :authentication       => 'plain',
+  :enable_starttls_auto => true  }
 end
