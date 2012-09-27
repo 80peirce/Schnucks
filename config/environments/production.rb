@@ -68,11 +68,11 @@ Schnucks::Application.configure do
     # email configuration
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :address              => "mail.adriennepeirce.com",
+  :address              => "mail.playschnucks.com",
   :port                 => 2626,
-  :domain               => 'adriennepeirce.com',
-  :user_name            => 'abp@adriennepeirce.com',
-  :password             => 'mecom80!',
+  :domain               => 'playschnucks.com',
+  :user_name            => 'results@playschnucks.com',
+  :password             => 'results530',
   :authentication       => 'plain',
   :enable_starttls_auto => false  }
   

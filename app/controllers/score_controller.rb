@@ -213,7 +213,7 @@ end
 
   def confirm
   
-    NormanMailer.welcome_email("jacobvass@gmail.com").deliver
+    NormanMailer.results_email("jacobvass@gmail.com").deliver
 
   end
   
