@@ -209,6 +209,8 @@ class ScoreController < ApplicationController
     @schnucker2_total += 1.5
   end
   
+
+
 end
 
   def confirm

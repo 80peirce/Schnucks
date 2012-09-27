@@ -29,20 +29,13 @@ SV: <%= @schnucker1_sv_total %>
 <hr>
 <h1>Schnucker 2: <%= @schnucker2 %></h1>
 <h2>Points: <%= @schnucker2_total %></h2>
-Total hits: <%= @schnucker2_hits_total %>
-<br>
-Total at bats: <%= @schnucker2_ab_total %>
-<br>
-Batting Average: <%= sprintf("%.3f",@schnucker2_ba)[-4,4] %>
-<br>
-Runs: <%= @schnucker2_runs_total %>
-<br>
-Home Runs: <%= @schnucker2_hr_total %>
-<br>
-RBI: <%= @schnucker2_rbi_total %>
-<br>
-Stolen Bases: <%= @schnucker2_sb_total %>
-<br>
+Total hits: <%= @schnucker2_hits_total %><br>
+Total at bats: <%= @schnucker2_ab_total %><br>
+Batting Average: <%= sprintf("%.3f",@schnucker2_ba)[-4,4] %><br>
+Runs: <%= @schnucker2_runs_total %><br>
+Home Runs: <%= @schnucker2_hr_total %><br>
+RBI: <%= @schnucker2_rbi_total %><br>
+Stolen Bases: <%= @schnucker2_sb_total %><br>
 Innings Pitched: <%= @schnucker2_ip_total %><br>
 Earned Runs: <%= @schnucker2_er_total %><br>
 Hits: <%= @schnucker2_h_total %>
@@ -55,12 +48,9 @@ L: <%= @schnucker2_l_total %>
 SV: <%= @schnucker2_sv_total %>
 
 <%= form_tag("confirm", :method => "post") do %>
-
-<%= text_field_tag(:result_address, nil, :size => 30) %>
-
- <%= submit_tag("Send Email") %>
-    
-  <% end %>
+  <%= text_field_tag(:result_address, nil, :size => 30) %>
+  <%= submit_tag("Send Email") %>    
+<% end %>
   
 
   
