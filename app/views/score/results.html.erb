@@ -56,7 +56,7 @@ SV: <%= @schnucker2_sv_total %>
 
 <%= form_tag("confirm", :method => "post") do %>
 
-
+<%= text_field_tag(:result_address, nil, :size => 30) %>
 
  <%= submit_tag("Send Email") %>
     

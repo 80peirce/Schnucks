@@ -212,8 +212,8 @@ class ScoreController < ApplicationController
 end
 
   def confirm
-  
-    NormanMailer.results_email("jacobvass@gmail.com").deliver
+    @result_address = params[:result_address]
+    NormanMailer.results_email(@result_address).deliver
 
   end
   
