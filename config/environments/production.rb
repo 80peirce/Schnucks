@@ -68,12 +68,12 @@ Schnucks::Application.configure do
     # email configuration
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :address              => "slmp-550-28.slc.westdc.net",
-  :port                 => 465,
+  :address              => "mail.adriennepeirce.com",
+  :port                 => 2626,
   :domain               => 'adriennepeirce.com',
-  :user_name            => 'abp',
+  :user_name            => 'abp@adriennepeirce.com',
   :password             => 'mecom80!',
   :authentication       => 'plain',
-  :enable_starttls_auto => true  }
+  :enable_starttls_auto => false  }
   
 end
