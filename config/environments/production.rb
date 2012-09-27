@@ -70,7 +70,7 @@ Schnucks::Application.configure do
   config.action_mailer.smtp_settings = {
   :address              => "mail.adriennepeirce.com",
   :port                 => 2626,
-  :domain               => 'www.adriennepeirce.com',
+  :domain               => 'adriennepeirce.com',
   :user_name            => 'abp@adriennepeirce.com',
   :password             => 'mecom80!',
   :authentication       => 'plain',
