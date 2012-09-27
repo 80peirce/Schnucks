@@ -71,7 +71,7 @@ Schnucks::Application.configure do
   :address              => "mail.adriennepeirce.com",
   :port                 => 2626,
   :domain               => 'adriennepeirce.com',
-  :user_name            => 'abp+adriennepeirce.com',
+  :user_name            => 'abp',
   :password             => 'mecom80!',
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
