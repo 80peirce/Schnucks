@@ -1,4 +1,8 @@
 class ScoreController < ApplicationController
+  
+  caches_page :results
+  
+  
   def manual
     @users = User.all
     @user_table = User
@@ -209,6 +213,8 @@ class ScoreController < ApplicationController
     @schnucker2_total += 1.5
   end
   
+#### render_to_string here????
+
 
 
 end
