@@ -4,7 +4,7 @@ class NormanMailer < ActionMailer::Base
   def results_email(user)
     @user = user
     @url = "http://schnucks.herokuapp.com"
-    attachments.inline['results.html'] = Rails.public_path+"results.html"
+    attachments.inline['results.html'] = Rails.public_path+"/results.html"
     mail(:to => @user, :subject => "Schnuck You")
   end
   
