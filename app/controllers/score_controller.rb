@@ -215,7 +215,7 @@ class ScoreController < ApplicationController
   
 #### render_to_string here????
 
-
+   @results_email1 = render_to_string :action => :results
 
 end
 
