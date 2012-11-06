@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121101011940) do
+ActiveRecord::Schema.define(:version => 20121106035016) do
 
   create_table "hitters", :force => true do |t|
     t.string   "name"
@@ -51,10 +51,15 @@ ActiveRecord::Schema.define(:version => 20121101011940) do
     t.string   "name"
     t.integer  "wins"
     t.integer  "losses"
-    t.decimal  "total_points", :precision => 5, :scale => 1
-    t.datetime "created_at",                                 :null => false
-    t.datetime "updated_at",                                 :null => false
+    t.decimal  "total_points",    :precision => 5, :scale => 1
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
     t.string   "email"
+    t.integer  "rps_wins"
+    t.integer  "rocks"
+    t.integer  "papers"
+    t.integer  "scissorses"
+    t.string   "password_digest"
   end
 
 end
