@@ -39,7 +39,7 @@ Schnucks::Application.configure do
   config.assets.debug = true
   
   # email configuration
-  config.action_mailer.delivery_method = :smtp
+  ##config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   :address              => "mail.adriennepeirce.com",
   :port                 => 2626,
@@ -48,4 +48,10 @@ Schnucks::Application.configure do
   :password             => 'mecom80!',
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
+  
+  ## change per stack overflow http://stackoverflow.com/questions/5286009/actionmailer-and-development-mode-can-it-write-to-a-file-or-something
+  ## for developmental purposes
+  config.action_mailer.delivery_method = :file
+  
+  
 end
