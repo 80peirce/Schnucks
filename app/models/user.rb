@@ -18,7 +18,7 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :losses, :name, :total_points, :wins, :email, :rps_wins, :rocks, :papers, :scissorses
+  attr_accessible :losses, :name, :total_points, :wins, :email, :rps_wins, :rocks, :papers, :scissorses, :password, :password_confirmation
   
   has_secure_password
 

@@ -1,0 +1,19 @@
+<h2>SCHNUCKS HALL OF ETERNAL GLORY</h2>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Wins</th>
+    <th>Total Points</th>
+    <th>Rock Paper Scissors Wins</th>
+  </thead>
+  <% @users_ranked.each do |u| %>
+  <tr>
+    <td><%= u.name %></td>
+    <td><%= u.wins %></td>
+    <td><%= u.total_points %></td>
+    <td><%= u.rps_wins %></td>
+  </tr>
+  <% end %>
+  
+</table>

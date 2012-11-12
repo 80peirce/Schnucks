@@ -60,7 +60,7 @@ class ScoreController < ApplicationController
   
   ## calculate player2 totals
   
-  @schnucker2 = params[:p2]
+  @schnucker2 = params[:User_name]
   
   @schnucker2_hits_total = total_things(params[:c2_h],params[:firstb2_h],params[:secondb2_h],params[:thirdb2_h],params[:ss2_h],
   params[:of1_2_h],params[:of2_2_h],params[:of3_2_h],params[:ut2_h])
