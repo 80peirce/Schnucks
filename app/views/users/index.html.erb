@@ -13,6 +13,9 @@
     <td><%= u.wins %></td>
     <td><%= u.total_points %></td>
     <td><%= u.rps_wins %></td>
+    <td><%= link_to 'Edit', edit_user_path(u) %></td>
+    <td><%= link_to 'Destroy', u, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    
   </tr>
   <% end %>
   
