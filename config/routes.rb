@@ -1,6 +1,6 @@
 Schnucks::Application.routes.draw do
   resources :users
-  
+  #ADD COMMENT
   get "score/manual"
 
   post "shownames/show"
