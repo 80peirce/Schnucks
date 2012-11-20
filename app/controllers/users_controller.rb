@@ -37,10 +37,11 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
-    params[:user][:wins] = params[:user][:wins].to_i 
-    params[:user][:total_points] = params[:user][:total_points].to_i
+    #params[:user][:wins] = params[:user][:wins].to_i 
+    #params[:user][:total_points] = params[:user][:total_points].to_i
     if @user.update_attributes(params[:user])
-      redirect_to @user, notice: 'User was successfully updated.'
+      #redirect_to @user, notice: 'User was successfully updated.'
+      redirect_to users_url 
     else
       render 'edit'
     end
