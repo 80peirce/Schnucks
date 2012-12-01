@@ -1,9 +1,8 @@
 <h1>Let's play Schnucks!</h1>
 
-<% session[:schnucker2] = 'Adrienne' %>
-    
 
-<%= form_tag("/shownames/show", :method => "post") do %>
+
+<%= form_tag("/play/create", :method => "post") do %>
 
 <script language="javascript">
             var x = 2;
@@ -18,7 +17,7 @@
                 }
 
             }
-</script
+</script>
                  
 
 <h2>How many Schnuckers?</h2><br />

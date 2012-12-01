@@ -14,6 +14,14 @@ Schnucks::Application.routes.draw do
   get "start/begin"
 
   get "hitters/list"
+  
+  post "play/play"
+  
+  get "play/play"
+  
+  post "play/add"
+  
+  post "play/create"
 
 
   # The priority is based upon order of creation:
