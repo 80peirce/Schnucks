@@ -1,15 +1,15 @@
 class ChangeSomeFields < ActiveRecord::Migration
   def change
-    change_column :pitchers, :innings_pitched, :decimal
-    change_column :pitchers, :wins, :integer
-    change_column :pitchers, :losses, :integer
-    change_column :pitchers, :saves, :integer
-    change_column :pitchers, :walks, :integer
-    change_column :pitchers, :strikeouts, :integer
-    change_column :pitchers, :earned_runs, :integer
-    change_column :pitchers, :era, :decimal
-    change_column :pitchers, :whip, :decimal
-    change_column :pitchers, :hits, :integer
+    #change_column :pitchers, :innings_pitched, :decimal
+    #change_column :pitchers, :wins, :integer
+    #change_column :pitchers, :losses, :integer
+    #change_column :pitchers, :saves, :integer
+    #change_column :pitchers, :walks, :integer
+    #change_column :pitchers, :strikeouts, :integer
+    #change_column :pitchers, :earned_runs, :integer
+    #change_column :pitchers, :era, :decimal
+    #change_column :pitchers, :whip, :decimal
+    #change_column :pitchers, :hits, :integer
   end
 
   
