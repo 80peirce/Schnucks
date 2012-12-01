@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121106035016) do
+ActiveRecord::Schema.define(:version => 20121201021429) do
 
   create_table "hitters", :force => true do |t|
     t.string   "name"
@@ -24,8 +24,9 @@ ActiveRecord::Schema.define(:version => 20121106035016) do
     t.integer  "home_runs"
     t.integer  "rbi"
     t.integer  "stolen_bases"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "schnucks_team_id"
   end
 
   create_table "pitchers", :force => true do |t|
@@ -33,18 +34,27 @@ ActiveRecord::Schema.define(:version => 20121106035016) do
     t.string   "team"
     t.string   "games"
     t.string   "games_started"
-    t.string   "innings_pitched"
-    t.string   "wins"
-    t.string   "losses"
-    t.string   "saves"
-    t.string   "walks"
-    t.string   "strikeouts"
-    t.string   "earned_runs"
-    t.string   "era"
-    t.string   "whip"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-    t.string   "hits"
+    t.float    "innings_pitched",  :limit => 255
+    t.integer  "wins",             :limit => 255
+    t.integer  "losses",           :limit => 255
+    t.integer  "saves",            :limit => 255
+    t.integer  "walks",            :limit => 255
+    t.integer  "strikeouts",       :limit => 255
+    t.integer  "earned_runs",      :limit => 255
+    t.float    "era",              :limit => 255
+    t.float    "whip",             :limit => 255
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.integer  "hits",             :limit => 255
+    t.integer  "schnucks_team_id"
+  end
+
+  create_table "schnucks_teams", :force => true do |t|
+    t.integer  "draft_slot"
+    t.string   "owner"
+    t.float    "game_score"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  draft_slot: 1
+  owner: MyString
+  game_score: 1.5
+
+two:
+  draft_slot: 1
+  owner: MyString
+  game_score: 1.5
