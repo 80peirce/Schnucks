@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   end
   
   def create
+    @user = User.new(params[:user])
     @user.wins = 0
     @user.total_points = 0
     if @user.save
