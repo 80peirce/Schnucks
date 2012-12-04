@@ -2,23 +2,24 @@
 #
 # Table name: pitchers
 #
-#  id              :integer          not null, primary key
-#  name            :string(255)
-#  team            :string(255)
-#  games           :string(255)
-#  games_started   :string(255)
-#  innings_pitched :string(255)
-#  wins            :string(255)
-#  losses          :string(255)
-#  saves           :string(255)
-#  walks           :string(255)
-#  strikeouts      :string(255)
-#  earned_runs     :string(255)
-#  era             :string(255)
-#  whip            :string(255)
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  hits            :string(255)
+#  id               :integer          not null, primary key
+#  name             :string(255)
+#  team             :string(255)
+#  games            :string(255)
+#  games_started    :string(255)
+#  innings_pitched  :float(255)
+#  wins             :integer
+#  losses           :integer
+#  saves            :integer
+#  walks            :integer
+#  strikeouts       :integer
+#  earned_runs      :integer
+#  era              :float(255)
+#  whip             :float(255)
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  hits             :integer
+#  schnucks_team_id :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html

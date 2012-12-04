@@ -1,13 +1,19 @@
-<h2><%= session[:team1].owner%>'s Team</h2>
+<h2><%= @team_name1 %>'s Team</h2>
+<table><% @hitters_team1.each do |h|%>
+  <tr><td><%= h.name %></td>
+    <td><%= h.position %></td>
+    </tr>
+  <% end %>
+</table>
 
-<%= session[:team1].hitters %>
+
 
 <% positions = ["C", "1B", "2B", "SS", "3B", "OF1", "OF2", "OF3", "UT"] %>
 
 <h2>Draft your players!</h2>
 
 <h3>Hitters</h3>
-<table><% @hitters.each do |h|%>
+<table><% @hitters_available.each do |h|%>
   <tr><td><%= h.name %></td>
     <td><select name="position_desired">
         <% positions.each do |p| %>
@@ -25,6 +31,12 @@
 <h3>Pitchers</h3>
 
 
-<h2><%= session[:team2].owner%>'s Team</h2>
+<h2><%= @team_name2 %>'s Team</h2>
+<table><% @hitters_team2.each do |h|%>
+  <tr><td><%= h.name %></td>
+    <td><%= h.position %></td>
+    </tr>
+  <% end %>
+</table>
   
 

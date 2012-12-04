@@ -1,0 +1,16 @@
+# == Schema Information
+#
+# Table name: schnucks_games
+#
+#  id         :integer          not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  schnucks_team_id: 1
+
+two:
+  schnucks_team_id: 1

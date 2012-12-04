@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: schnucks_teams
+#
+#  id               :integer          not null, primary key
+#  draft_slot       :integer
+#  owner            :string(255)
+#  game_score       :float
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  schnucks_game_id :integer
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
