@@ -22,6 +22,9 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
+  # gem below added per heroku error message when pushing - to do with therubyracer
+  gem 'libv8', '~> 3.11.8'
+
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platform => :ruby
 
