@@ -23,7 +23,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # gem below added per heroku error message when pushing - to do with therubyracer
- # gem 'libv8', '~> 3.11.8'
+   gem 'libv8', '~> 3.11.8'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platform => :ruby
