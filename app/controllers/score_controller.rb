@@ -17,8 +17,8 @@ class ScoreController < ApplicationController
       sum
     end
   
-  
-  
+  ####refactor point #1 - scoresheet helper
+  ###also add validation
   @schnucker1 = params[:p1]
   
   @schnucker1_hits_total = total_things(params[:c1_h],params[:firstb1_h],params[:secondb1_h],params[:thirdb1_h],params[:ss1_h],
@@ -41,8 +41,10 @@ class ScoreController < ApplicationController
   @schnucker1_sb_total = total_things(params[:c1_sb],params[:firstb1_sb],params[:secondb1_sb],params[:thirdb1_sb],params[:ss1_sb],
   params[:of1_1_sb],params[:of2_1_sb],params[:of3_1_sb],params[:ut1_sb])
   
+  ### integer / decimal
+  @schnucker1_ip_total = params[:pp1_1_ip].to_f + params[:pp2_1_ip].to_f + params[:pp3_1_ip].to_f + params[:pp4_1_ip].to_f
   
-  @schnucker1_ip_total = params[:pp1_1_ip].to_i + params[:pp2_1_ip].to_i + params[:pp3_1_ip].to_i + params[:pp4_1_ip].to_i
+  
   @schnucker1_er_total = params[:pp1_1_er].to_i + params[:pp2_1_er].to_i + params[:pp3_1_er].to_i + params[:pp4_1_er].to_i
   @schnucker1_h_total = params[:pp1_1_h].to_i + params[:pp2_1_h].to_i + params[:pp3_1_h].to_i + params[:pp4_1_h].to_i 
   @schnucker1_bb_total = params[:pp1_1_bb].to_i + params[:pp2_1_bb].to_i + params[:pp3_1_bb].to_i +  params[:pp4_1_bb].to_i
@@ -83,7 +85,10 @@ class ScoreController < ApplicationController
   params[:of1_2_sb],params[:of2_2_sb],params[:of3_2_sb],params[:ut2_sb])
   
   
-  @schnucker2_ip_total = params[:pp1_2_ip].to_i + params[:pp2_2_ip].to_i + params[:pp3_2_ip].to_i + params[:pp4_2_ip].to_i
+  ### integer / decimal
+  @schnucker2_ip_total = params[:pp1_2_ip].to_f + params[:pp2_2_ip].to_f + params[:pp3_2_ip].to_f + params[:pp4_2_ip].to_f
+  
+  
   @schnucker2_er_total = params[:pp1_2_er].to_i + params[:pp2_2_er].to_i + params[:pp3_2_er].to_i + params[:pp4_2_er].to_i
   @schnucker2_h_total = params[:pp1_2_h].to_i + params[:pp2_2_h].to_i + params[:pp3_2_h].to_i + params[:pp4_2_h].to_i 
   @schnucker2_bb_total = params[:pp1_2_bb].to_i + params[:pp2_2_bb].to_i + params[:pp3_2_bb].to_i +  params[:pp4_2_bb].to_i
