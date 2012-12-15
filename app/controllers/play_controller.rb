@@ -10,11 +10,15 @@ class PlayController < ApplicationController
 
     # Initialize Schucks team ids
     
-  Hitter.all.each do |h| 
-    h.schnucks_team_id = nil
-    h.save
-  end
+    Hitter.all.each do |h| 
+      h.schnucks_team_id = nil
+      h.save
+    end
     
+    Pitcher.all.each do |p| 
+      p.schnucks_team_id = nil
+      p.save
+    end
     
     
     @team1 = SchnucksTeam.create( owner: params[:p1])
@@ -70,5 +74,113 @@ class PlayController < ApplicationController
     end
     
     redirect_to play_play_path
+  end
+  
+  def score
+    @team1 = SchnucksGame.find(session[:todays_game_id]).schnucks_teams[0]
+    @team2 = SchnucksGame.find(session[:todays_game_id]).schnucks_teams[1]
+    
+    
+    #@hitters_team1 = Hitter.find_all_by_schnucks_team_id(0)
+    #@pitchers_team1 = Pitcher.find_all_by_schnucks_team_id(0) 
+ 
+    #@hitters_team2 = Hitter.find_all_by_schnucks_team_id(1)
+    #@pitchers_team2 = Pitcher.find_all_by_schnucks_team_id(1)
+        
+    
+    @team1.hitters = Hitter.find_all_by_schnucks_team_id(0)
+    @team2.hitters = Hitter.find_all_by_schnucks_team_id(1)
+    
+    @team1.pitchers = Pitcher.find_all_by_schnucks_team_id(0) 
+    @team2.pitchers = Pitcher.find_all_by_schnucks_team_id(1)
+
+  #Score the game
+
+  #initialize scores    
+    @team1.game_score = 0
+    @team2.game_score = 0
+    
+    @team1_ab = 0
+    @team1_hits = 0
+    @team1_runs = 0
+    @team1_hr = 0
+    @team1_rbi = 0
+    @team1_sb = 0
+    
+    @team1.hitters.each do |h|
+      @team1_ab += h.atbats
+      @team1_hits += h.hits 
+      @team1_runs += h.runs
+      @team1_hr += h.home_runs
+      @team1_rbi += h.rbi
+      @team1_sb += h.stolen_bases
+    end
+    
+    @team1_ba = @team1_hits.to_f / @team1_ab.to_f
+    
+    @team1_ip = 0
+    @team1_er = 0
+    @team1_hits_allowed = 0
+    @team1_bb = 0
+    @team1_k = 0
+    @team1_wins = 0
+    @team1_losses = 0
+    @team1_saves = 0
+    
+    @team1.pitchers.each do |p|
+      @team1_ip += p.innings_pitched
+      @team1_er += p.earned_runs
+      @team1_hits_allowed += p.hits
+      @team1_bb += p.walks
+      @team1_k += p.strikeouts
+      @team1_wins += p.wins
+      @team1_losses += p.losses
+      @team1_saves += p.saves
+    end
+    
+    @team1_era = (@team1_er.to_f / @team1_ip.to_f) * 9.to_f
+    @team1_whip = (@team1_bb.to_f + @team1_hits_allowed.to_f)/ @team1_ip.to_f
+    
+    @team2_ab = 0
+    @team2_hits = 0
+    @team2_runs = 0
+    @team2_hr = 0
+    @team2_rbi = 0
+    @team2_sb = 0
+    
+    @team2.hitters.each do |h|
+      @team2_ab += h.atbats
+      @team2_hits += h.hits 
+      @team2_runs += h.runs
+      @team2_hr += h.home_runs
+      @team2_rbi += h.rbi
+      @team2_sb += h.stolen_bases
+    end
+    
+    @team2_ba = @team2_hits.to_f / @team2_ab.to_f
+  
+   
+    @team2_ip = 0
+    @team2_er = 0
+    @team2_hits_allowed = 0
+    @team2_bb = 0
+    @team2_k = 0
+    @team2_wins = 0
+    @team2_losses = 0
+    @team2_saves = 0
+    
+    @team2.pitchers.each do |p|
+      @team2_ip += p.innings_pitched
+      @team2_er += p.earned_runs
+      @team2_hits_allowed += p.hits
+      @team2_bb += p.walks
+      @team2_k += p.strikeouts
+      @team2_wins += p.wins
+      @team2_losses += p.losses
+      @team2_saves += p.saves
+    end
+    
+    @team2_era = (@team2_er.to_f / @team2_ip.to_f) * 9.to_f
+    @team2_whip = (@team2_bb.to_f + @team2_hits_allowed.to_f)/ @team2_ip.to_f
   end
 end

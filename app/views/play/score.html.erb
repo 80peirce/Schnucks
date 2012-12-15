@@ -1,0 +1,115 @@
+<h1>SCOOOOOOOOOORE</h1>
+<hr>
+<h2><%= @team1.owner %></h2>
+<table><tr><th>Player</th><th>MLB Team</th><th>Position</th></th></ht><th>BA</th><th>AB</th><th>H</th><th>R</th><th>RBI</th><th>HR</th><th>SB</th></tr>
+<% @team1.hitters.each do |h| %>
+  <tr><td><%= h.name %></td>
+  <td><%= h.team %></td>
+  <td><%= h.position %></td>
+  <td></td>
+  <td><%= h.atbats %></td>
+  <td><%= h.hits %></td>
+  <td><%= h.runs %></td>
+  <td><%= h.rbi %></td>
+  <td><%= h.home_runs %></td>
+  <td><%= h.stolen_bases %></td></tr>
+<% end %>
+<tr><td>TOTAL</td>
+<td></td>
+<td></td>
+<td><%= sprintf("%.3f",@team1_ba)[-4,4] %></td>
+<td><%= @team1_ab %></td>
+<td><%= @team1_hits %></td>
+<td><%= @team1_runs %></td>
+<td><%= @team1_rbi %></td>
+<td><%= @team1_hr %></td>
+<td><%= @team1_sb %></td>
+</tr>
+</table>
+<hr>
+<table><tr><th>Player</th><th>MLB Team</th><th>ERA</th><th>WHIP</th><th>IP</th><th>H</th><th>BB</th><th>ER</th><th>K</th><th>SV</th><th>W</th><th>L</th></tr>
+<% @team1.pitchers.each do |p| %>
+<tr><td><%= p.name %></td>
+<td><%= p.team %>
+<td></td>
+<td></td>
+<td><%= p.innings_pitched %></td>
+<td><%= p.hits %></td>
+<td><%= p.walks %></td>
+<td><%= p.earned_runs %></td>
+<td><%= p.strikeouts %></td>
+<td><%= p.saves %></td>
+<td><%= p.wins %></td>
+<td><%= p.losses %></td></tr>
+<% end %>
+<tr><td>TOTAL</td>
+<td></td>
+<td><%= @team1_era.to_s[0,4] %></td>
+<td><%= @team1_whip.to_s[0,4] %></td>
+<td><%= @team1_ip %></td>
+<td><%= @team1_hits_allowed %></td>
+<td><%= @team1_bb %></td>
+<td><%= @team1_er %></td>
+<td><%= @team1_k %></td>
+<td><%= @team1_saves %></td>
+<td><%= @team1_wins %></td>
+<td><%= @team1_losses %></td>
+</tr>
+</table>
+<hr>
+<h2><%= @team2.owner %></h2>
+<table><tr><th>Player</th><th>MLB Team</th><th>Position</th></th></th><th>BA</th><th>AB</th><th>H</th><th>R</th><th>RBI</th><th>HR</th><th>SB</th></tr>
+<% @team2.hitters.each do |h| %>
+  <tr><td><%= h.name %></td>
+  <td><%= h.team %></td>
+  <td><%= h.position %></td>
+  <td></td>
+  <td><%= h.atbats %></td>
+  <td><%= h.hits %></td>
+  <td><%= h.runs %></td>
+  <td><%= h.rbi %></td>
+  <td><%= h.home_runs %></td>
+  <td><%= h.stolen_bases %></td></tr>
+<% end %>
+<tr><td>TOTAL</td>
+<td></td>
+<td></td>
+<td><%= sprintf("%.3f",@team2_ba)[-4,4] %></td>
+<td><%= @team2_ab %></td>
+<td><%= @team2_hits %></td>
+<td><%= @team2_runs %></td>
+<td><%= @team2_rbi %></td>
+<td><%= @team2_hr %></td>
+<td><%= @team2_sb %></td>
+</tr>
+</table>
+<hr>
+<table><tr><th>Player</th><th>MLB Team</th><th>ERA</th><th>WHIP</th><th>IP</th><th>H</th><th>BB</th><th>ER</th><th>K</th><th>SV</th><th>W</th><th>L</th></tr>
+<% @team2.pitchers.each do |p| %>
+<tr><td><%= p.name %></td>
+<td><%= p.team %></td>
+<td></td>
+<td></td>
+<td><%= p.innings_pitched %></td>
+<td><%= p.hits %></td>
+<td><%= p.walks %></td>
+<td><%= p.earned_runs %></td>
+<td><%= p.strikeouts %></td>
+<td><%= p.saves %></td>
+<td><%= p.wins %></td>
+<td><%= p.losses %></td></tr>
+<% end %>
+<tr><td>TOTAL</td>
+<td></td>
+<td><%= @team2_era.to_s[0,4] %></td>
+<td><%= @team2_whip.to_s[0,4] %></td>
+<td><%= @team2_ip %></td>
+<td><%= @team2_hits_allowed %></td>
+<td><%= @team2_bb %></td>
+<td><%= @team2_er %></td>
+<td><%= @team2_k %></td>
+<td><%= @team2_saves %></td>
+<td><%= @team2_wins %></td>
+<td><%= @team2_losses %></td>
+</tr> 
+</table><hr>

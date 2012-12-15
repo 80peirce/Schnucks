@@ -22,6 +22,8 @@ Schnucks::Application.routes.draw do
   post "play/add"
   
   post "play/create"
+  
+  post "play/score"
 
 
   # The priority is based upon order of creation:
