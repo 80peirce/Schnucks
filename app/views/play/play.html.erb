@@ -1,7 +1,14 @@
 <h2><%= @team_name1 %>'s Team</h2>
-<table><% @hitters_team1.each do |h|%>
+<table><th>Hitters</th>
+  <% @hitters_team1.each do |h|%>
   <tr><td><%= h.name %></td>
     <td><%= h.position %></td>
+    </tr>
+  <% end %>
+</table>
+<table><th>Pitchers</th>
+  <% @pitchers_team1.each do |p|%>
+  <tr><td><%= p.name %></td>
     </tr>
   <% end %>
 </table>
@@ -10,7 +17,7 @@
 
 <% positions = ["C", "1B", "2B", "SS", "3B", "OF1", "OF2", "OF3", "UT"] %>
 
-<h2>Draft your players!</h2>
+<h2>Draft your player, <%= @picking_team %>! </h2>
 
 <h3>Hitters</h3>
 <table><% @hitters_available.each do |h|%>
@@ -20,21 +27,30 @@
         <option><%= p %></option>
         <% end %>
         </select></td>
-    <td><%= button_to "Choose", play_add_path(hitter_id: h)%></td></tr>
+    <td><%= button_to "Choose", play_add_path(hitter_id: h, pitcher_id: 666)%></td></tr>
   <% end %>
 </table>
 
 
-
-
-
 <h3>Pitchers</h3>
+<table><% @pitchers_available.each do |p|%>
+  <tr><td><%= p.name %></td>
+    <td><%= button_to "Choose", play_add_path(pitcher_id: p, hitter_id: 666)%></td></tr>
+  <% end %>
+</table>
 
 
 <h2><%= @team_name2 %>'s Team</h2>
-<table><% @hitters_team2.each do |h|%>
+<table><th>Hitters</th>
+  <% @hitters_team2.each do |h|%>
   <tr><td><%= h.name %></td>
     <td><%= h.position %></td>
+    </tr>
+  <% end %>
+</table>
+<table><th>Pitchers</th>
+  <% @pitchers_team2.each do |p|%>
+  <tr><td><%= p.name %></td>
     </tr>
   <% end %>
 </table>

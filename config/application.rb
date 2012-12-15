@@ -17,6 +17,8 @@ end
 module Schnucks
   class Application < Rails::Application
 
+  ## trying this to make heroku work, based on
+  ## https://devcenter.heroku.com/articles/rails3x-asset-pipeline-cedar#troubleshooting
   config.assets.initialize_on_precompile = false
   
    
