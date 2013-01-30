@@ -77,6 +77,28 @@ class PlayController < ApplicationController
   end
   
   def score
+    
+    def schnucks_score_higher(total1, total2)
+      if (total1 * 10000).to_i >  (total2 * 10000).to_i
+        [2,1]
+      elsif (total1 * 10000).to_i < (total2 * 10000).to_i  
+        [1,2]
+      else
+        [1.5,1.5]
+      end
+    end
+    
+    def schnucks_score_lower(total1, total2)
+      if (total1 * 10000).to_i <  (total2 * 10000).to_i
+        [2,1]
+      elsif (total1 * 10000).to_i > (total2 * 10000).to_i  
+        [1,2]
+      else
+        [1.5,1.5]
+      end
+    end
+    
+    
     @team1 = SchnucksGame.find(session[:todays_game_id]).schnucks_teams[0]
     @team2 = SchnucksGame.find(session[:todays_game_id]).schnucks_teams[1]
     
@@ -182,5 +204,27 @@ class PlayController < ApplicationController
     
     @team2_era = (@team2_er.to_f / @team2_ip.to_f) * 9.to_f
     @team2_whip = (@team2_bb.to_f + @team2_hits_allowed.to_f)/ @team2_ip.to_f
+  
+  @team1.game_score += schnucks_score_higher(@team1_hits,@team2_hits)[0]
+  @team2.game_score += schnucks_score_higher(@team1_hits,@team2_hits)[1]
+  @team1.game_score += schnucks_score_higher(@team1_runs,@team2_runs)[0]
+  @team2.game_score += schnucks_score_higher(@team1_runs,@team2_runs)[1]
+  @team1.game_score += schnucks_score_higher(@team1_hr,@team2_hr)[0]
+  @team2.game_score += schnucks_score_higher(@team1_hr,@team2_hr)[1]
+  @team1.game_score += schnucks_score_higher(@team1_rbi,@team2_rbi)[0]
+  @team2.game_score += schnucks_score_higher(@team1_rbi,@team2_rbi)[1]
+  @team1.game_score += schnucks_score_higher(@team1_sb,@team2_sb)[0]
+  @team2.game_score += schnucks_score_higher(@team1_sb,@team2_sb)[1]
+  @team1.game_score += schnucks_score_higher(@team1_wins,@team2_wins)[0]
+  @team2.game_score += schnucks_score_higher(@team1_wins,@team2_wins)[1]
+  @team1.game_score += schnucks_score_higher(@team1_k,@team2_k)[0]
+  @team2.game_score += schnucks_score_higher(@team1_k,@team2_k)[1]
+  @team1.game_score += schnucks_score_higher(@team1_saves,@team2_saves)[0]
+  @team2.game_score += schnucks_score_higher(@team1_saves,@team2_saves)[1]
+
+  @team1.game_score += schnucks_score_lower(@team1_era,@team2_era)[0]
+  @team2.game_score += schnucks_score_lower(@team1_era,@team2_era)[1]
+  @team1.game_score += schnucks_score_lower(@team1_whip,@team2_whip)[0]
+  @team2.game_score += schnucks_score_lower(@team1_whip,@team2_whip)[1]
   end
 end

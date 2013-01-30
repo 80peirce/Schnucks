@@ -1,6 +1,6 @@
 <h1>SCOOOOOOOOOORE</h1>
 <hr>
-<h2><%= @team1.owner %></h2>
+<h2><%= @team1.owner %> - <%= @team1.game_score %> points</h2>
 <table><tr><th>Player</th><th>MLB Team</th><th>Position</th></th></ht><th>BA</th><th>AB</th><th>H</th><th>R</th><th>RBI</th><th>HR</th><th>SB</th></tr>
 <% @team1.hitters.each do |h| %>
   <tr><td><%= h.name %></td>
@@ -57,7 +57,7 @@
 </tr>
 </table>
 <hr>
-<h2><%= @team2.owner %></h2>
+<h2><%= @team2.owner %> - <%= @team2.game_score %> points</h2>
 <table><tr><th>Player</th><th>MLB Team</th><th>Position</th></th></th><th>BA</th><th>AB</th><th>H</th><th>R</th><th>RBI</th><th>HR</th><th>SB</th></tr>
 <% @team2.hitters.each do |h| %>
   <tr><td><%= h.name %></td>
