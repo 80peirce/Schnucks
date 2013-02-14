@@ -149,6 +149,8 @@ class PlayController < ApplicationController
     @team1_losses = 0
     @team1_saves = 0
     
+    
+=begin
     @team1.pitchers.each do |p|
       #@team1_ip += p.innings_pitched
       @team1_ip += 1 
@@ -161,8 +163,10 @@ class PlayController < ApplicationController
       @team1_saves += p.saves
     end
     
+    
     @team1_era = (@team1_er.to_f / @team1_ip.to_f) * 9.to_f
     @team1_whip = (@team1_bb.to_f + @team1_hits_allowed.to_f)/ @team1_ip.to_f
+=end
     
     @team2_ab = 0
     @team2_hits = 0
@@ -192,6 +196,7 @@ class PlayController < ApplicationController
     @team2_losses = 0
     @team2_saves = 0
     
+=begin
     @team2.pitchers.each do |p|
       #@team1_ip += p.innings_pitched
       @team2_ip += 1
@@ -206,6 +211,8 @@ class PlayController < ApplicationController
     
     @team2_era = (@team2_er.to_f / @team2_ip.to_f) * 9.to_f
     @team2_whip = (@team2_bb.to_f + @team2_hits_allowed.to_f)/ @team2_ip.to_f
+
+=end
   
   @team1.game_score += schnucks_score_higher(@team1_hits,@team2_hits)[0]
   @team2.game_score += schnucks_score_higher(@team1_hits,@team2_hits)[1]
@@ -224,9 +231,9 @@ class PlayController < ApplicationController
   @team1.game_score += schnucks_score_higher(@team1_saves,@team2_saves)[0]
   @team2.game_score += schnucks_score_higher(@team1_saves,@team2_saves)[1]
 
-  @team1.game_score += schnucks_score_lower(@team1_era,@team2_era)[0]
-  @team2.game_score += schnucks_score_lower(@team1_era,@team2_era)[1]
-  @team1.game_score += schnucks_score_lower(@team1_whip,@team2_whip)[0]
-  @team2.game_score += schnucks_score_lower(@team1_whip,@team2_whip)[1]
+  #@team1.game_score += schnucks_score_lower(@team1_era,@team2_era)[0]
+  #@team2.game_score += schnucks_score_lower(@team1_era,@team2_era)[1]
+  #@team1.game_score += schnucks_score_lower(@team1_whip,@team2_whip)[0]
+  #@team2.game_score += schnucks_score_lower(@team1_whip,@team2_whip)[1]
   end
 end
