@@ -150,23 +150,23 @@ class PlayController < ApplicationController
     @team1_saves = 0
     
     
-=begin
+
     @team1.pitchers.each do |p|
       #@team1_ip += p.innings_pitched
-      @team1_ip += 1 
-      @team1_er += p.earned_runs
-      @team1_hits_allowed += p.hits
-      @team1_bb += p.walks
+     # @team1_ip += 1 
+     # @team1_er += p.earned_runs
+     # @team1_hits_allowed += p.hits
+     # @team1_bb += p.walks
       @team1_k += p.strikeouts
-      @team1_wins += p.wins
-      @team1_losses += p.losses
-      @team1_saves += p.saves
+     # @team1_wins += p.wins
+     # @team1_losses += p.losses
+     # @team1_saves += p.saves
     end
     
     
-    @team1_era = (@team1_er.to_f / @team1_ip.to_f) * 9.to_f
-    @team1_whip = (@team1_bb.to_f + @team1_hits_allowed.to_f)/ @team1_ip.to_f
-=end
+    #@team1_era = (@team1_er.to_f / @team1_ip.to_f) * 9.to_f
+    #@team1_whip = (@team1_bb.to_f + @team1_hits_allowed.to_f)/ @team1_ip.to_f
+
     
     @team2_ab = 0
     @team2_hits = 0
