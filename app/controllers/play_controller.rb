@@ -140,7 +140,7 @@ class PlayController < ApplicationController
     
     @team1_ba = @team1_hits.to_f / @team1_ab.to_f
     
-    @team1_ip = 0
+    @team1_ip = 0.0
     @team1_er = 0
     @team1_hits_allowed = 0
     @team1_bb = 0
@@ -157,7 +157,7 @@ class PlayController < ApplicationController
      # @team1_er += p.earned_runs
      # @team1_hits_allowed += p.hits
      # @team1_bb += p.walks
-      @team1_k += p.strikeouts
+      @team1_k += p.strikeouts.to_i
      # @team1_wins += p.wins
      # @team1_losses += p.losses
      # @team1_saves += p.saves
