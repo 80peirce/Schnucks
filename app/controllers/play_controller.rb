@@ -150,7 +150,8 @@ class PlayController < ApplicationController
     @team1_saves = 0
     
     @team1.pitchers.each do |p|
-      @team1_ip += p.innings_pitched
+      #@team1_ip += p.innings_pitched
+      @team1_ip += 1 
       @team1_er += p.earned_runs
       @team1_hits_allowed += p.hits
       @team1_bb += p.walks
@@ -192,7 +193,8 @@ class PlayController < ApplicationController
     @team2_saves = 0
     
     @team2.pitchers.each do |p|
-      @team2_ip += p.innings_pitched
+      #@team1_ip += p.innings_pitched
+      @team2_ip += 1
       @team2_er += p.earned_runs
       @team2_hits_allowed += p.hits
       @team2_bb += p.walks
