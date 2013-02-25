@@ -1,36 +1,62 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-    body
-    {
-    background-image:url("http://i.imgur.com/F7Oso.jpg");
-    } 
-  </style> 
-    <title>Hello Schnuckers</title>
-  </head>
   <body>
-         <!-- <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding the Schnucks Train! -->
-          <img src="/images/schnucks_logo2.png"></h2>
- 
-      <div id="footer">&nbsp;</div>
-    </div>
-    
-<FORM METHOD="LINK" ACTION="start/begin">
-<INPUT TYPE="submit" VALUE="Start a Game!">
-</FORM>
-</br>
-<FORM METHOD="LINK" ACTION="/score/manual">
-<INPUT TYPE="submit" VALUE="Score it old school.">
-</FORM>  
-</br>
-<FORM METHOD="LINK" ACTION="/users/new">
-<INPUT TYPE="submit" VALUE="New user">
-</FORM>
-</br>
-<FORM METHOD="LINK" ACTION="/users">
-<INPUT TYPE="submit" VALUE="Hall of Records">
-</FORM>
-</body>
-</html>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action 
+      <div class="hero-unit">
+        <h1>Play Schnucks Every Day!</h1>
+        <p>Schnucks is fantasy baseball within a single game! </p>
+        <p><a class="btn btn-primary btn-large" href'"#">Learn more »</a></p>
+      </div>-->
+
+      <!-- Narrow unit for a primary marketing message or call to action-->
+      <div class="jumbotron">
+        <img src="../images/schnucks_logo2.png">
+        <h2 class="lead">Play Schnucks Every Day!</h2>
+        <a class="btn btn-large btn-success" href="http://twitter.github.com/bootstrap/examples/marketing-narrow.html#">Learn More</a>
+      </div>
+            
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <div class="well well-large"><h2>Start a Game</h2>
+          <p>Right now you can only play one game (Red Sox vs. Twins April 23, 2012) but we are working on the LIVE version,
+          so you can play along with any game.</p>
+          <p><a class="btn btn-large btn-success" href="start/begin">Play Now »</a></p></div>
+        </div>
+        <div class="span4">
+          <div class="well well-large"><h2>Score it Old School</h2>
+          <p>If you want to fill in the score yourself, we'll calculate the winner.  This works for live or historical games-
+          anything where you know the actual stats. </p>
+          <p><a class="btn btn-large btn-success" href="/score/manual">Old School »</a></p>
+          </div>
+        </div>
+        <div class="span4">
+          <div class="well well-large">
+          <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+              <form action="http://playschnucks.us6.list-manage1.com/subscribe/post?u=3655dbe68fac97dde6663ae68&amp;id=f1f5f57450" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <h2>Schnucks Beta Team</h2>
+                <p>Stay in the loop as we roll out new features.</p>
+                <div class="mc-field-group">
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address" >
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"></div>
+                </div>
+              </form>
+            </div>
+            <!--End mc_embed_signup-->
+          </div>    
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© Company 2013</p>
+      </footer>
+
+    </div> <!-- /container -->

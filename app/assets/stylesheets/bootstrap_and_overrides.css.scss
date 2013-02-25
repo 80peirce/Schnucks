@@ -1,0 +1,68 @@
+/* Main Stylesheet */
+/* Import Bootstrap styles and Responsive styles */
+@import url('bootstrap.css');
+@import url('bootstrap-responsive.css');
+
+/* Add top padding for navbar-top-fixed */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  }
+/* Remove top padding when top navbar goes static in narrow viewports */
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+/* Make body transparent */
+body {
+  background-color: transparent;
+}
+
+/* handle background image */
+html { 
+	background: url(../images/yankeestadium8.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/*change hero unit background */
+.hero-unit {
+  background-color: transparent;
+}
+
+/* narrow unit */
+
+ /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 20px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
