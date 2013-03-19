@@ -1,59 +1,73 @@
-<h2><%= @team_name1 %>'s Team</h2>
-<table><th>Hitters</th>
-  <% @hitters_team1.each do |h|%>
-  <tr><td><%= h.name %></td>
-    <td><%= h.position %></td>
-    </tr>
-  <% end %>
-</table>
-<table><th>Pitchers</th>
-  <% @pitchers_team1.each do |p|%>
-  <tr><td><%= p.name %></td>
-    </tr>
-  <% end %>
-</table>
-
-
+<h1 style="text-align: center;">Draft your players</h1>
 
 <% positions = ["C", "1B", "2B", "SS", "3B", "OF1", "OF2", "OF3", "UT"] %>
+<h2 style="text-align: center;">It's your turn, <span class="text-success"><%= @picking_team %></span>! </h2>
+<%= button_to "Score it!", play_score_path(), :class => 'btn btn-large btn-success' %>
 
-<h2>Draft your player, <%= @picking_team %>! </h2>
+<div class='container'>
+    <div class='row'>
+        <div class="span3">
+          <div class="well well-large">
+          <h2><%= @team_name1 %>'s Team</h2>
+          <table><th><h4>Hitters</h4></th>
+            <% @hitters_team1.each do |h|%>
+            <tr><td><%= h.name %></td>
+            <td><%= h.position %></td>
+            </tr>
+            <% end %>
+          </table>
+          <table><th><h4>Pitchers</h4></th>
+            <% @pitchers_team1.each do |p|%>
+            <tr><td><%= p.name %></td>
+            </tr>
+            <% end %>
+          </table>
+          </div>
+        </div>
+        <div class="span3">
+          <div class="well well-large">
+          <h3>Available Hitters</h3>
+            <table><% @hitters_available.each do |h|%>
+              <tr><td><%= h.name %></td>
+              <!-- Skip positions <td><select name="position_desired">
+              <% positions.each do |p| %>
+              <option><%= p %></option>
+              <% end %>
+              </select></td> -->
+              <td><%= button_to "Choose", play_add_path(hitter_id: h, pitcher_id: 666)%></td></tr>
+              <% end %>
+            </table>
+          </div>
+        </div>
+        <div class="span3">
+          <div class="well well-large">
+          <h3>Available Pitchers</h3>
+            <table><% @pitchers_available.each do |p|%>
+              <tr><td><%= p.name %></td>
+              <td><%= button_to "Choose", play_add_path(pitcher_id: p, hitter_id: 666)%></td></tr>
+              <% end %>
+            </table>
+          </div>
+        </div>
+        <div class="span3">
+          <div class="well well-large">
+          <h2><%= @team_name2 %>'s Team</h2>
+            <table><th><h4>Hitters</h4></th>
+              <% @hitters_team2.each do |h|%>
+              <tr><td><%= h.name %></td>
+              <td><%= h.position %></td>
+              </tr>
+              <% end %>
+            </table>
+            <table><th><h4>Pitchers</h4></th>
+              <% @pitchers_team2.each do |p|%>
+              <tr><td><%= p.name %></td>
+              </tr>
+              <% end %>
+            </table>
+          </div>
+        </div>
+    </div>
+</div>
 
-<h3>Hitters</h3>
-<table><% @hitters_available.each do |h|%>
-  <tr><td><%= h.name %></td>
-    <td><select name="position_desired">
-        <% positions.each do |p| %>
-        <option><%= p %></option>
-        <% end %>
-        </select></td>
-    <td><%= button_to "Choose", play_add_path(hitter_id: h, pitcher_id: 666)%></td></tr>
-  <% end %>
-</table>
 
-
-<h3>Pitchers</h3>
-<table><% @pitchers_available.each do |p|%>
-  <tr><td><%= p.name %></td>
-    <td><%= button_to "Choose", play_add_path(pitcher_id: p, hitter_id: 666)%></td></tr>
-  <% end %>
-</table>
-
-
-<h2><%= @team_name2 %>'s Team</h2>
-<table><th>Hitters</th>
-  <% @hitters_team2.each do |h|%>
-  <tr><td><%= h.name %></td>
-    <td><%= h.position %></td>
-    </tr>
-  <% end %>
-</table>
-<table><th>Pitchers</th>
-  <% @pitchers_team2.each do |p|%>
-  <tr><td><%= p.name %></td>
-    </tr>
-  <% end %>
-</table>
-<hr>
-<%= button_to "Score it!", play_score_path() %>  
-<hr>

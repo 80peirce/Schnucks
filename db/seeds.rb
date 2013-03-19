@@ -5,10 +5,10 @@ require 'csv'
 
 #all=CSV.read("db/origdata/batters.csv")
 
-#CSV.foreach("db/origdata/hitters_schnuck1.csv", {:headers => true, :header_converters => :symbol}) do |row|
-#  Hitter.create(:name => row[:name], :team => row[:mlb_team], :position => row[:position], :atbats => row[:ab],
-#:runs => row[:r], :hits => row[:h], :home_runs => row[:hr], :rbi => row[:rbi], :stolen_bases => row[:sb])
-#end
+CSV.foreach("db/origdata/hitters_schnuck1.csv", {:headers => true, :header_converters => :symbol}) do |row|
+  Hitter.create(:name => row[:name], :team => row[:mlb_team], :position => row[:position], :atbats => row[:ab],
+:runs => row[:r], :hits => row[:h], :home_runs => row[:hr], :rbi => row[:rbi], :stolen_bases => row[:sb])
+end
 
 CSV.foreach("db/origdata/pitchers_schnuck1.csv", {:headers => true, :header_converters => :symbol}) do |row|
   Pitcher.create(:name => row[:name], :team => row[:mlb_team], :games => row[:g], :games_started => row[:gs],

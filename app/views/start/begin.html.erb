@@ -1,9 +1,9 @@
-<h1>Let's play Schnucks!</h1>
+   
+<h1 style='text-align: center;'>Let's play Schnucks!</h1>
+<h2 style='text-align: center;'>Who's playing?</h2>
 
 
-
-<%= form_tag("/play/create", :method => "post") do %>
-
+<!-- Choosing between 2 and 3 players
 <script language="javascript">
             var x = 2;
 
@@ -17,26 +17,41 @@
                 }
 
             }
-</script>
+</script> 
                  
 
 <h2>How many Schnuckers?</h2><br />
 <input type="radio" name="numberofplayers" onclick="playa(2)" value="two" /> 2<br />
 <input type="radio" name="numberofplayers" onclick="playa(3)" value="three" /> 3 <br />
+-->
+ 
 
-<br>
-  <%= label_tag(:p1, "Schnucker 1:") %>
-  <%= text_field_tag(:p1) %>
-  <br>
-  <%= label_tag(:p2, "Schnucker 2:") %>
-  <%= text_field_tag(:p2) %>
-  <br>
+<%= form_for("schnuckers", :url => "../play/create", :html => { :class => "form" } ) do |f| %>
+<fieldset>
+  <div class="row">
+      <div class="span5 offset">...</div>
+      <div class="span2">
+        <div class="controls">
+            <%= label_tag(:p1, "Schnucker 1:") %>
+            <%= text_field_tag(:p1) %>
+            <%= label_tag(:p2, "Schnucker 2:") %>
+            <%= text_field_tag(:p2) %>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </div>
+ 
+  </div>
 
+
+</fieldset>
+
+<!-- More from 2 vs. 3 
 <div id="playa3" style="visibility:hidden">
   <%= label_tag(:p3, "Schnucker 3:") %>
   <%= text_field_tag(:p3) %>
-</div>
-  <%= submit_tag("Done") %>
+</div>   -->
+
+  
 <% end %>
 
 

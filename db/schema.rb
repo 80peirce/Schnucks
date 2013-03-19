@@ -34,18 +34,18 @@ ActiveRecord::Schema.define(:version => 20121204032547) do
     t.string   "team"
     t.string   "games"
     t.string   "games_started"
-    t.float    "innings_pitched",  :limit => 255
-    t.integer  "wins",             :limit => 255
-    t.integer  "losses",           :limit => 255
-    t.integer  "saves",            :limit => 255
-    t.integer  "walks",            :limit => 255
-    t.integer  "strikeouts",       :limit => 255
-    t.integer  "earned_runs",      :limit => 255
-    t.float    "era",              :limit => 255
-    t.float    "whip",             :limit => 255
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
-    t.integer  "hits",             :limit => 255
+    t.string   "innings_pitched"
+    t.string   "wins"
+    t.string   "losses"
+    t.string   "saves"
+    t.string   "walks"
+    t.string   "strikeouts"
+    t.string   "earned_runs"
+    t.string   "era"
+    t.string   "whip"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "hits"
     t.integer  "schnucks_team_id"
   end
 
