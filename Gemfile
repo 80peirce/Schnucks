@@ -39,6 +39,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'simple_form'
 
 gem 'simple_form'
 
