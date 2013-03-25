@@ -8,6 +8,8 @@ gem 'rails', '3.2.11'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 
+
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -37,6 +39,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+gem 'simple_form'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
