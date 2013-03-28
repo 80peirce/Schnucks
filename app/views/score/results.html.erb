@@ -1,5 +1,5 @@
 <title>Here are your results</title>
-
+<div class="white">
 <h1>Schnucker 1: <%= @schnucker1 %></h1>
 <h2>Points: <%= @schnucker1_total %></h2>
 Total hits: <%= @schnucker1_hits_total %>
@@ -46,7 +46,7 @@ WHIP: <%= @schnucker2_whip.to_s[0,4] %><br>
 W: <%= @schnucker2_w_total %>
 L: <%= @schnucker2_l_total %>
 SV: <%= @schnucker2_sv_total %>
-
+</div>
 <%= form_tag("confirm", :method => "post") do %>
   <%= text_field_tag(:result_address, nil, :size => 30) %>
   <%= submit_tag("Send Email") %>    
