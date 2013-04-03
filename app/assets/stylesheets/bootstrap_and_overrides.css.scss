@@ -3,10 +3,17 @@
 @import url('bootstrap.css');
 @import url('bootstrap-responsive.css');
 
-
+$myGreen:#526F35;
+  
 /* White text */
 .white {
     color:white;
+}
+
+/* Green background with white text */
+.greenback {
+    color:white;
+    background-color:$myGreen;
 }
 
 /* Add top padding for navbar-top-fixed */

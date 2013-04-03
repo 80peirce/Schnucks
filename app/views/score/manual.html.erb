@@ -2,15 +2,13 @@
 
 <h1>Score it old school.</h1>
 <p>Enter each Schnucker's team and scores:</p>
-
-
-
+</br>
 
 <%= form_tag("results", :method => "post") do %>
 <h2 class="white">Schnucker 1</h2>
   <%= text_field_tag(:p1, "Enter name here") %>
 </br>
-<table border="0" style="color:green";>
+<table border="0" class="greenback">
   <tr style="text-align: center";>
     <td>Pos</td><td>Name</td><td>AB</td><td>R</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
   <tr ><td>C</td>
@@ -96,8 +94,8 @@
   </tr>
     </table>
 </br><table>
-  <tr style="text-align: center; color:green"><td>Pos</td><td>Name</td><td>IP</td><td>ER</td><td>H</td><td>BB</td><td>K</td><td>W</td><td>L</td><td>SV</td></tr>
-      <tr><td>PP1</td>
+  <tr class="greenback" style="text-align: center;"><td>Pos</td><td>Name</td><td>IP</td><td>ER</td><td>H</td><td>BB</td><td>K</td><td>W</td><td>L</td><td>SV</td></tr>
+      <tr><td class="greenback">PP1</td>
   <td><%= text_field_tag(:pp1_1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:pp1_1_ip, nil, :class => 'input-mini') %></td>
   <td><%= text_field_tag(:pp1_1_er, nil, :class => 'input-mini') %></td>
@@ -108,7 +106,7 @@
   <td><%= text_field_tag(:pp1_1_l, nil, :class => 'input-mini') %></td>
   <td><%= text_field_tag(:pp1_1_sv, nil, :class => 'input-mini') %></td>
   </tr>
-    <tr><td>PP2</td>
+    <tr><td class="greenback">PP2</td>
   <td><%= text_field_tag(:pp2_1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:pp2_1_ip, nil, :class => 'input-mini') %></td>
   <td><%= text_field_tag(:pp2_1_er, nil, :class => 'input-mini') %></td>
@@ -119,7 +117,7 @@
   <td><%= text_field_tag(:pp2_1_l, nil, :class => 'input-mini') %></td>
   <td><%= text_field_tag(:pp2_1_sv, nil, :class => 'input-mini') %></td>
   </tr>
-    <tr><td>PP3</td>
+    <tr><td class="greenback">PP3</td>
   <td><%= text_field_tag(:pp3_1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:pp3_1_ip, nil, :class => 'input-mini') %></td>
   <td><%= text_field_tag(:pp3_1_er, nil, :class => 'input-mini') %></td>
@@ -130,7 +128,7 @@
   <td><%= text_field_tag(:pp3_1_l, nil, :class => 'input-mini') %></td>
   <td><%= text_field_tag(:pp3_1_sv, nil, :class => 'input-mini') %></td>
   </tr> 
-    <tr><td>PP4</td>
+    <tr><td class="greenback">PP4</td>
   <td><%= text_field_tag(:pp4_1_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:pp4_1_ip, nil, :class => 'input-mini') %></td>
   <td><%= text_field_tag(:pp4_1_er, nil, :class => 'input-mini') %></td>
@@ -149,8 +147,8 @@
   <!-- <%= text_field_tag(:p2, "Enter name here") %> -->
   </br>
   <%= select("User", "name", User.all.collect {|u| [ u.name, u.id ] }, {:prompt => 'Select Schnucker'}) %>
-  <table>
-    <tr style="text-align: center; color:green";><td>Pos</td><td>Name</td><td>AB</td><td>R</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
+  <table class="greenback">
+    <tr style="text-align: center;"><td>Pos</td><td>Name</td><td>AB</td><td>R</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
   <tr><td>C</td> 
   <td><%= text_field_tag(:c2_name, nil, :size => 20) %></td>
   <td><%= text_field_tag(:c2_ab, nil, :class => 'input-mini') %></td>
@@ -233,7 +231,7 @@
   <td><%= text_field_tag(:ut2_sb, nil, :class => 'input-mini') %></td>
   </tr>
     </table>
-</br><table>
+</br><table class="greenback">
   <tr style="text-align: center";><td>Pos</td><td>Name</td><td>IP</td><td>ER</td><td>H</td><td>BB</td><td>K</td><td>W</td><td>L</td><td>SV</td></tr>
       <tr><td>PP1</td>
   <td><%= text_field_tag(:pp1_2_name, nil, :size => 20) %></td>
@@ -281,12 +279,12 @@
   </tr> 
 </table>
   <br>
-    <% @u = @users.first %>
-     <h2>Schnucker 3</h2>
+    <!--% @u = @users.first %>
+     <h2>Schnucker 3</h2-->
 
   <!--<%= text_field_tag(:p3, "FUCK") %> -->
   
-  <%= select("User", "name", User.all.collect {|u| [ u.name, u.id ] }, {:prompt => 'Select Schnucker'}) %>
+  <!--%= select("User", "name", User.all.collect {|u| [ u.name, u.id ] }, {:prompt => 'Select Schnucker'}) %>
 
   <table><tr style="text-align: center; color:green";><td>Pos</td><td>Name</td><td>AB</td><td>R</td><td>H</td><td>HR</td><td>RBI</td><td>SB</td></tr>
   <tr><td>C</td>
@@ -417,18 +415,8 @@
   <td><%= text_field_tag(:pp4_3_l, nil, :class => 'input-mini') %></td>
   <td><%= text_field_tag(:pp4_3_sv, nil, :class => 'input-mini') %></td>
   </tr> 
-</table>
+</table-->
   <%= submit_tag("Done") %>
-  
-
-
-
-  
-  
-  
-  
-  
-  
   
 <% end %>
 

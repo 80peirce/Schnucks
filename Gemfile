@@ -40,8 +40,7 @@ end
 
 gem 'jquery-rails'
 gem 'simple_form'
-
-gem 'simple_form'
+gem 'bootstrap-sass'
 
 
 # To use ActiveModel has_secure_password
