@@ -1,22 +1,31 @@
 <h2>SCHNUCKS HALL OF ETERNAL GLORY</h2>
 
-<table>
-  <thead>
-    <th>Name</th>
-    <th>Wins</th>
-    <th>Total Points</th>
-    <th>Rock Paper Scissors Wins</th>
-  </thead>
-  <% @users_ranked.each do |u| %>
-  <tr>
-    <td><%= u.name %></td>
-    <td><%= u.wins %></td>
-    <td><%= u.total_points %></td>
-    <td><%= u.rps_wins %></td>
-    <td><%= link_to 'Edit', edit_user_path(u) %></td>
-    <td><%= link_to 'Destroy', u, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    
-  </tr>
-  <% end %>
-  
-</table>
+<div class="row">
+    <div class="span2"></div>
+    <div class="span8">
+
+      <table class="table table-hover" >
+        <thead>
+          <th>Name</th>
+          <th>Wins</th>
+          <th>Total Points</th>
+          <th class="span1">Rocks</th>
+          <th class="span1">Papers</th>
+          <th class="span1">Scissorses</th>
+          <th>Roshambo Wins</th>
+        </thead>
+      <% @users_ranked.each do |u| %>
+        <tr style="text-align: center;">
+          <td class="table-left"><%= u.name %></td>
+          <td><%= u.wins %></td>
+          <td><%= u.total_points %></td>
+          <td class="span1"><%= u.rocks %></td>
+          <td class="span1"><%= u.papers %></td>
+          <td class="span1"><%= u.scissorses %></td>
+          <td><%= u.rps_wins %></td>
+        </tr>
+      <% end %>
+      </table>
+      </div>
+  <div class="span2"></div>
+</div>

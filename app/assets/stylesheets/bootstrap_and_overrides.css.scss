@@ -5,6 +5,16 @@
 
 $myGreen:#526F35;
   
+/* Center text in all tables */ 
+.table th,
+.table td {
+  text-align: center;
+}
+
+.table-left td {
+  text-align: left;
+}
+
 /* White text */
 .white {
     color:white;
