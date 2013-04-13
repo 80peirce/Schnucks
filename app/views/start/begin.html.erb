@@ -27,15 +27,14 @@
  
 
 <%= form_for("schnuckers", :url => "../play/create", :html => { :class => "form" } ) do |f| %>
-<!--fieldset-->
-  <div class="row">
-      <div class="span5 offset">...</div>
-      <div class="span2">
+ <div class="row">
+    <div class="span5 offset">...</div>
+      <div class="span2">       
         <div class="controls">
-            <%= label_tag(:p1, "Schnucker 1:") %>
-            <%= text_field_tag(:p1) %>
-            <%= label_tag(:p2, "Schnucker 2:") %>
-            <%= text_field_tag(:p2) %>
+          <%= label_tag(:p1, "Schnucker 1:") %>
+          <%= collection_select(:p1, :name, User.all, :name, :name) %>
+          <%= label_tag(:p2, "Schnucker 2:") %>
+          <%= collection_select(:p2, :name, User.all, :name, :name) %>
         </div>
         <button type="submit" class="btn">Submit</button>
       </div>

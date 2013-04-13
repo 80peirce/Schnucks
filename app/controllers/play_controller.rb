@@ -21,8 +21,8 @@ class PlayController < ApplicationController
     end
     
     
-    @team1 = SchnucksTeam.create( owner: params[:p1])
-    @team2 = SchnucksTeam.create( owner: params[:p2])
+    @team1 = SchnucksTeam.create( owner: params[:p1][:name])
+    @team2 = SchnucksTeam.create( owner: params[:p2][:name])
     @todays_game = SchnucksGame.new
     @todays_game.schnucks_teams[0] = @team1
     @todays_game.schnucks_teams[1] = @team2
