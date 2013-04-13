@@ -36,6 +36,9 @@ class PlayController < ApplicationController
 
   def play
     
+    #messing around:
+    @positions = ["C", "1B", "2B", "SS", "3B", "OF", "UT"]
+    
     @team_whose_turn_it_is = SchnucksTeam.find_all_by_schnucks_game_id(session[:todays_game_id])[session[:turn]]
     @picking_team = @team_whose_turn_it_is.owner
     

@@ -29,11 +29,12 @@
           <h3>Available Hitters</h3>
             <table><% @hitters_available.each do |h|%>
               <tr><td><%= h.name %></td>
-              <!-- Skip positions <td><select name="position_desired">
-              <% positions.each do |p| %>
+              <td><select style="width:55px;" name="position_desired">
+              <% @eligible_pos = h.position.split(',').push('UT') %>
+              <% @eligible_pos.each do |p| %>
               <option><%= p %></option>
               <% end %>
-              </select></td> -->
+              </select></td>
               <td><%= button_to "Choose", play_add_path(hitter_id: h, pitcher_id: 666)%></td></tr>
               <% end %>
             </table>
